@@ -50,5 +50,5 @@
     }
   }
   setTimeout(burst, 1300);
-  setInterval(burst, 45000);
+  setInterval(burst, 100000);
 })();
