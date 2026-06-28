@@ -71,7 +71,7 @@ nav{position:sticky;top:0;z-index:50;background:rgba(8,12,20,.86);backdrop-filte
 
 /* hero / page head */
 .phead{padding:64px 22px 10px}
-.kicker{color:var(--gold);font-size:.72rem;letter-spacing:3px;text-transform:uppercase;margin-bottom:18px;font-family:var(--stencil)}
+.kicker{color:var(--gold);font-size:.85rem;letter-spacing:3px;text-transform:uppercase;margin-bottom:18px;font-family:var(--stencil)}
 h1.display{font-size:clamp(2.6rem,6vw,4.6rem)}
 .hero-title{display:flex;flex-direction:column;justify-content:flex-start;height:100%}
 .hero-title h1{font-size:clamp(1.9rem,3.4vw,3rem);line-height:1.32;margin:0}
@@ -80,7 +80,7 @@ h1.display{font-size:clamp(2.6rem,6vw,4.6rem)}
 
 /* sections */
 section{padding:54px 0;border-bottom:1px solid var(--border)}
-.eyebrow{color:var(--gold);font-size:.7rem;letter-spacing:3px;text-transform:uppercase;font-family:var(--stencil);margin-bottom:10px}
+.eyebrow{color:var(--gold);font-size:.85rem;letter-spacing:3px;text-transform:uppercase;font-family:var(--stencil);margin-bottom:10px}
 h2.display{font-size:clamp(1.9rem,4.5vw,3rem)}
 h3.display{font-size:1.7rem}
 .lead{color:var(--text-dim);max-width:660px;margin-top:10px;font-size:.96rem}
