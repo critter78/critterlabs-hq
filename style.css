@@ -279,3 +279,9 @@ footer{padding:40px 0;border-top:1px solid var(--border)}
 .glb-count{position:absolute;bottom:3vh;left:50%;transform:translateX(-50%);color:var(--text-dim);font-family:var(--mono);font-size:.8rem;letter-spacing:.5px}
 .glb-count b{color:var(--gold)}
 @media(max-width:560px){.glb-nav{width:40px;height:40px;font-size:1.5rem}}
+
+/* process animation embed (framed as a light screen) */
+.proc{margin-top:30px;max-width:920px}
+.proc .screen{padding:0!important;background:#faf9f5}
+.proc iframe{width:100%;height:600px;border:0;display:block}
+@media(max-width:760px){.proc iframe{height:460px}}
