@@ -28,7 +28,7 @@ a{color:inherit;text-decoration:none}
 
 /* nav */
 nav{position:sticky;top:0;z-index:50;background:rgba(8,12,20,.86);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
-.navin{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
+.navin{display:flex;align-items:center;justify-content:space-between;padding:16px 22px}
 .logo{display:flex;align-items:center;gap:9px;font-weight:700;letter-spacing:.5px;font-size:.95rem}
 .logo .lmark{width:30px;height:30px;flex:none;display:block}
 .logo .lw{display:flex;align-items:baseline;gap:6px;line-height:1}
@@ -56,7 +56,7 @@ nav{position:sticky;top:0;z-index:50;background:rgba(8,12,20,.86);backdrop-filte
 }
 
 /* hero / page head */
-.phead{padding:64px 0 10px}
+.phead{padding:64px 22px 10px}
 .kicker{color:var(--gold);font-size:.72rem;letter-spacing:3px;text-transform:uppercase;margin-bottom:18px;font-family:var(--stencil)}
 h1.display{font-size:clamp(2.6rem,6vw,4.6rem)}
 .hero-title{display:flex;flex-direction:column;justify-content:space-between;height:100%}
@@ -72,6 +72,7 @@ h3.display{font-size:1.7rem}
 .lead{color:var(--text-dim);max-width:660px;margin-top:10px;font-size:.96rem}
 p.body{color:var(--text-dim);max-width:680px;margin-top:16px}
 p.body+p.body{margin-top:12px}
+.about-grid>div>.body:first-child{margin-top:0}
 
 /* hero browser frame */
 .hero-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:40px;align-items:center}
