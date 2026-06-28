@@ -185,7 +185,7 @@ p.body+p.body{margin-top:12px}
 .tier li{color:var(--text-dim);font-size:.85rem;padding:7px 0 7px 20px;position:relative;border-bottom:1px solid var(--border)}
 .tier li:before{content:"+";color:var(--green);position:absolute;left:0;font-weight:700}
 .tier .btn{text-align:center}
-@media(max-width:760px){.tiers{grid-template-columns:1fr}.tier.featured{order:-1}}
+@media(max-width:760px){.tiers{grid-template-columns:1fr}}
 
 /* spec table */
 .table-wrap{margin-top:26px;overflow-x:auto;-webkit-overflow-scrolling:touch}
