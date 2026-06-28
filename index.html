@@ -27,7 +27,7 @@
   <div class="hero-top">
     <div class="hero-title">
       <div class="kicker">AI &amp; Algorithmic Engineering Studio</div>
-      <h1 class="display">Centralized <span class="gold">HQ</span> For Everything You Need &amp; Monitor All Day. <span class="blue">AI Driven Logic</span>, Every Morning, Everyday!</h1>
+      <h1 class="display">Centralized <span class="gold">HQ</span> For Everything You Monitor, Continuously and in Real-Time. <span class="blue">AI Driven Logic</span>, Everyday!</h1>
     </div>
     <div class="hero-art">
       <div class="win">
@@ -59,10 +59,10 @@
               <svg viewBox="0 0 220 30" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><polyline class="spark" points="2,26 30,22 58,24 86,15 114,18 142,9 170,12 198,4 218,6" fill="none" stroke="#3B8BFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </div>
             <div class="cards">
-              <div class="c2"><span class="tk">HWM 280C</span><div class="dp"><span>Entry</span><b>$10.90</b></div><div class="dp"><span>Edge</span><b style="color:#F5C842">106</b></div></div>
-              <div class="c2"><span class="tk">MIDD 175C</span><div class="dp"><span>Entry</span><b>$5.47</b></div><div class="dp"><span>Edge</span><b style="color:#F5C842">97</b></div></div>
-              <div class="c2 s"><span class="tk">DLTR</span><div class="dp"><span>Last</span><b>$68.20</b></div><div class="dp"><span>Edge</span><b style="color:#4ADE80">120</b></div></div>
-              <div class="c2 s"><span class="tk">TER</span><div class="dp"><span>Last</span><b>$112.40</b></div><div class="dp"><span>Edge</span><b style="color:#4ADE80">120</b></div></div>
+              <div class="c2"><span class="tk">NVDA 145C</span><div class="dp"><span>Entry</span><b>$6.40</b></div><div class="dp"><span>Edge</span><b style="color:#F5C842">118</b></div></div>
+              <div class="c2"><span class="tk">GOOGL 180C</span><div class="dp"><span>Entry</span><b>$4.85</b></div><div class="dp"><span>Edge</span><b style="color:#F5C842">101</b></div></div>
+              <div class="c2 s"><span class="tk">SHOP</span><div class="dp"><span>Last</span><b>$78.30</b></div><div class="dp"><span>Edge</span><b style="color:#4ADE80">120</b></div></div>
+              <div class="c2 s"><span class="tk">SPCX</span><div class="dp"><span>Last</span><b>$14.20</b></div><div class="dp"><span>Edge</span><b style="color:#4ADE80">112</b></div></div>
             </div>
           </div>
         </div>
@@ -131,17 +131,24 @@
   var lines=["Regime flipped bullish overnight.","3 setups near target — trim 2.","Volatility cooling; risk in range."];
   var els=[document.getElementById('bl0'),document.getElementById('bl1'),document.getElementById('bl2')];
   if(!els[0])return;
-  if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(function(e,i){e.textContent=lines[i];});return;}
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(reduce){els.forEach(function(e,i){e.textContent=lines[i];});return;}
   var caret='<span class="cur">&nbsp;</span>';
   function type(i){
-    if(i>=lines.length){setTimeout(reset,4500);return;}
+    if(i>=lines.length){startSparkle();return;}
     var el=els[i],txt=lines[i],n=0;
     (function step(){
       n++;el.innerHTML=txt.slice(0,n)+caret;
-      if(n<txt.length){setTimeout(step,58);}else{setTimeout(function(){el.textContent=txt;type(i+1);},520);}
+      if(n<txt.length){setTimeout(step,62);}else{el.textContent=txt;setTimeout(function(){type(i+1);},480);}
     })();
   }
-  function reset(){els.forEach(function(e){e.innerHTML='';});type(0);}
+  function startSparkle(){
+    setInterval(function(){
+      var el=els[Math.floor(Math.random()*els.length)];
+      el.classList.add('sparkle');
+      setTimeout(function(){el.classList.remove('sparkle');},1400);
+    },30000);
+  }
   type(0);
 })();
 </script>

@@ -45,7 +45,9 @@ nav{position:sticky;top:0;z-index:50;background:rgba(8,12,20,.86);backdrop-filte
 .navlinks a:not(.btn){color:var(--text-dim);font-size:.82rem;letter-spacing:.5px;padding-bottom:3px;border-bottom:1.5px solid transparent;transition:color .12s,border-color .12s}
 .navlinks a:not(.btn):hover{color:var(--gold);border-bottom-color:var(--gold)}
 .navlinks a.active{color:var(--gold);border-bottom-color:var(--gold)}
-.navlinks .btn{padding:9px 16px;font-size:.8rem}
+.navlinks .btn{padding:9px 16px;font-size:.8rem;position:relative;overflow:hidden}
+.navlinks .btn::after{content:"";position:absolute;top:0;left:-75%;width:45%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-20deg);pointer-events:none;animation:shine 6s ease-in-out infinite}
+@media(prefers-reduced-motion:reduce){.navlinks .btn::after{display:none}}
 @media(max-width:720px){
   .navin{flex-wrap:wrap;gap:10px;justify-content:center}
   .logo{width:100%;justify-content:center}
@@ -57,6 +59,7 @@ nav{position:sticky;top:0;z-index:50;background:rgba(8,12,20,.86);backdrop-filte
 .phead{padding:64px 0 10px}
 .kicker{color:var(--gold);font-size:.72rem;letter-spacing:3px;text-transform:uppercase;margin-bottom:18px;font-family:var(--stencil)}
 h1.display{font-size:clamp(2.6rem,6vw,4.6rem)}
+.hero-title h1{font-size:clamp(1.9rem,3.6vw,3rem);line-height:1.08}
 .phead .sub{color:var(--text-dim);font-size:1.02rem;max-width:640px;margin:20px 0 0}
 .cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
 
@@ -110,8 +113,11 @@ p.body+p.body{margin-top:12px}
 .hx .pnl{display:flex;align-items:center;justify-content:space-between;gap:12px}
 .hx .pnl .big{color:#4ADE80;font-weight:700;font-size:1rem;margin-top:3px}
 .hx .pnl svg{flex:1;height:30px;min-width:0}
-.hx .spark{stroke-dasharray:300;stroke-dashoffset:300;animation:hqdraw 6s ease-in-out infinite alternate}
+.hx .spark{stroke-dasharray:300;stroke-dashoffset:300;animation:hqdraw 2.4s ease-out forwards,sparkleLine 7s ease-in-out 3.2s infinite}
 @keyframes hqdraw{to{stroke-dashoffset:0}}
+@keyframes sparkleLine{0%,88%,100%{filter:none}93%{filter:drop-shadow(0 0 5px rgba(59,139,255,.9))}}
+.hx .line.sparkle{animation:txtspark 1.4s ease}
+@keyframes txtspark{0%,100%{text-shadow:none}45%{text-shadow:0 0 7px rgba(245,200,66,.85),0 0 2px rgba(255,255,255,.6)}}
 .hx .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
 .hx .c2{background:#0A0F1C;border:1px solid rgba(255,255,255,.06);border-top:2px solid #F5C842;border-radius:4px;padding:7px}
 .hx .c2.s{border-top-color:#3B8BFF}
