@@ -187,7 +187,7 @@ p.body+p.body{margin-top:12px}
 .table-wrap{margin-top:26px;overflow-x:auto;-webkit-overflow-scrolling:touch}
 .spec{width:100%;min-width:520px;border-collapse:collapse;font-size:.86rem}
 .spec th,.spec td{text-align:left;padding:12px 14px;border-bottom:1px solid var(--border);vertical-align:top}
-.spec thead th{color:var(--gold);font-family:var(--stencil);font-size:.66rem;letter-spacing:1px;text-transform:uppercase;background:var(--surface-2)}
+.spec thead th{color:var(--gold);font-family:var(--stencil);font-size:.73rem;letter-spacing:1px;text-transform:uppercase;background:var(--surface-2)}
 .spec td:first-child{color:var(--text-dim);width:30%}
 .spec tbody tr:hover{background:rgba(255,255,255,.02)}
 
