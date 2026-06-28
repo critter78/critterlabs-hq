@@ -6,8 +6,17 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Special+Elite&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-<style>/* wide variant: let all body text span full content width */
-.phead .sub,.lead,p.body{max-width:none}</style>
+<style>/* DEMO: fill the empty hero space with an "at a glance" card */
+.phead-two{display:grid;grid-template-columns:1fr .82fr;gap:34px;align-items:start;margin-top:6px}
+.phead-two .sub{max-width:none;margin-top:0}
+.hero-aside{background:var(--surface);border:1px solid var(--border-strong);border-radius:7px;padding:20px 22px}
+.hero-aside .ha-h{font-family:var(--stencil);color:var(--gold);font-size:.66rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:12px}
+.hero-aside .ha-row{display:flex;align-items:baseline;gap:14px;padding:9px 0;border-bottom:1px solid var(--border)}
+.hero-aside .ha-row:last-of-type{border-bottom:0}
+.hero-aside .ha-row b{font-family:var(--display);color:var(--blue);font-size:1.8rem;line-height:1;min-width:74px}
+.hero-aside .ha-row span{color:var(--text-dim);font-size:.86rem;line-height:1.35}
+.hero-aside .ha-tag{margin-top:12px;color:var(--gold);font-family:var(--stencil);font-size:.62rem;letter-spacing:1.5px}
+@media(max-width:760px){.phead-two{grid-template-columns:1fr}}</style>
 <link rel="icon" href="favicon.ico" sizes="any"><link rel="icon" type="image/png" href="favicon-32.png"><link rel="apple-touch-icon" href="apple-touch-icon.png">
 </head>
 <body>
@@ -27,7 +36,16 @@
 <header class="wrap phead">
   <div class="kicker">About</div>
   <h1 class="display">A Studio of <span class="gold">One Operator</span> &amp; A <span class="blue">Team of AI Agents</span>!</h1>
-  <p class="sub" style="max-width:none">CritterLabs Designs, Develops and Builds Production Trading Systems, ML Pipelines, AI Models &amp; Advanced Dashboards Containing Aggregated Data Feeding Your Dashboard. Real Systems, Measured Results &amp; a Clear Path to Positive ROI.</p>
+  <div class="phead-two">
+    <p class="sub">CritterLabs Designs, Develops and Builds Production Trading Systems, ML Pipelines, AI Models &amp; Advanced Dashboards Containing Aggregated Data Feeding Your Dashboard. Real Systems, Measured Results &amp; a Clear Path to Positive ROI.</p>
+    <aside class="hero-aside">
+      <div class="ha-h">At a Glance</div>
+      <div class="ha-row"><b>5</b><span>Live production systems shipped</span></div>
+      <div class="ha-row"><b>4</b><span>Domains — trading, sports, SEO &amp; family</span></div>
+      <div class="ha-row"><b>Daily</b><span>AI briefs running in production</span></div>
+      <div class="ha-tag">Founder-Led · AI-Augmented</div>
+    </aside>
+  </div>
 </header>
 
 <!-- ABOUT ME -->
