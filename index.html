@@ -8,12 +8,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Special+Elite&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <style>
-/* TRIAL (homepage only): handwritten Caveat font on buttons — same colors/hover, font + bold only */
-.btn{font-family:var(--display),cursive;font-weight:700;letter-spacing:.3px}
-.navlinks .btn{font-size:1.1rem;padding:8px 18px}
+/* Homepage buttons: Caveat (handwritten) on CTAs only — NAV "Book a Call" left untouched */
+.hero-below .cta-row .btn,.tier .btn,.final .btn{font-family:var(--display),cursive;font-weight:700;letter-spacing:.3px}
 .hero-below .cta-row .btn{font-size:1.2rem}
 .tier .btn{font-size:1.25rem}
-.final .btn{font-size:1.3rem}
+.final .btn{font-size:1.4rem}
+/* Final CTA only: inverted (white) button */
+.final .btn-blue{background:#fff;color:#0a0a0a;box-shadow:0 2px 0 #c2c6cd,0 10px 24px rgba(0,0,0,.4),inset 0 1px 0 rgba(255,255,255,.85)}
+.final .btn-blue:hover{background:#eef2f8;color:#0a0a0a;transform:translateY(-1px)}
 </style>
 <link rel="icon" href="favicon.ico" sizes="any"><link rel="icon" type="image/png" href="favicon-32.png"><link rel="apple-touch-icon" href="apple-touch-icon.png">
 </head>
@@ -134,7 +136,7 @@
 <div class="wrap"><div class="final">
   <h2 class="display">Stop Tab-Hopping. Stop Using Two Laptops and Your Mobile. Outperform with One Screen!</h2>
   <p>Book a 20-Minute Discovery Call &amp; We Will Tell You Exactly What's Possible With Your Data, What It Will Cost to Implement and What to Expect. All Before You Commit a Dollar.</p>
-  <a class="btn btn-blue" href="contact.html">Book My Discovery Call</a>
+  <a class="btn btn-blue" href="contact.html">BOOK MY CALL</a>
 </div></div>
 
 <footer><div class="wrap foot">
