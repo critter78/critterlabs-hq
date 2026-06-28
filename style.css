@@ -74,6 +74,10 @@ p.body+p.body{margin-top:12px}
 .win .screen img{max-width:100%;max-height:100%;height:auto;object-fit:contain;border-radius:2px;display:block}
 .hero-art{box-shadow:0 24px 60px rgba(0,0,0,.55);border-radius:7px}
 @media(max-width:820px){.hero-grid{grid-template-columns:1fr}.hero-art{order:-1;max-width:520px}}
+.hero-top{display:grid;grid-template-columns:1.05fr 1fr;gap:40px;align-items:center}
+.hero-below{margin-top:30px}
+.hero-below .sub{max-width:none;margin-top:0}
+@media(max-width:820px){.hero-top{grid-template-columns:1fr}.hero-top .hero-art{order:-1;max-width:520px;margin:0 auto}}
 /* hero HQ mockup */
 .live{margin-left:auto;color:var(--green);font-size:.58rem;letter-spacing:1.5px;font-family:var(--stencil);display:flex;align-items:center;gap:5px}
 .live .d{width:6px;height:6px;border-radius:50%;background:var(--green);animation:liveblink 1.6s infinite}
