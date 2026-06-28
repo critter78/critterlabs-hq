@@ -59,7 +59,7 @@ nav{position:sticky;top:0;z-index:50;background:rgba(8,12,20,.86);backdrop-filte
 .phead{padding:64px 0 10px}
 .kicker{color:var(--gold);font-size:.72rem;letter-spacing:3px;text-transform:uppercase;margin-bottom:18px;font-family:var(--stencil)}
 h1.display{font-size:clamp(2.6rem,6vw,4.6rem)}
-.hero-title h1{font-size:clamp(1.9rem,3.6vw,3rem);line-height:1.08}
+.hero-title h1{font-size:clamp(2.1rem,4vw,3.4rem);line-height:1.1}
 .phead .sub{color:var(--text-dim);font-size:1.02rem;max-width:640px;margin:20px 0 0}
 .cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
 
@@ -82,7 +82,7 @@ p.body+p.body{margin-top:12px}
 .win .screen img{max-width:100%;max-height:100%;height:auto;object-fit:contain;border-radius:2px;display:block}
 .hero-art{box-shadow:0 24px 60px rgba(0,0,0,.55);border-radius:7px}
 @media(max-width:820px){.hero-grid{grid-template-columns:1fr}.hero-art{order:-1;max-width:520px}}
-.hero-top{display:grid;grid-template-columns:1.05fr 1fr;gap:40px;align-items:center}
+.hero-top{display:grid;grid-template-columns:1.05fr 1fr;gap:40px;align-items:start}
 .hero-below{margin-top:30px}
 .hero-below .sub{max-width:none;margin-top:0}
 .hero-below .cta-row{justify-content:flex-end}
