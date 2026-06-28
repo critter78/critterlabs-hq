@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MGMT.CritterLabs.io — Case Study — CritterLabs HQ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Special+Elite&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav><div class="wrap navin">
+  <a class="logo" href="index.html"><span class="mark"></span>Critter<b>Labs</b>&nbsp;HQ</a>
+  <div class="navlinks">
+    <a href="index.html">Home</a><a href="about.html">About</a><a href="offer.html">Service</a>
+    <a href="work.html" class="active">Work</a><a href="contact.html">Contact</a>
+    <a href="contact.html" class="btn btn-gold">Book a call</a>
+  </div>
+</div></nav>
+
+<header class="wrap phead">
+  <a class="backlink" href="work.html">← All work</a>
+  <div class="kicker" style="margin-top:14px">Case study</div>
+  <h1 class="display">MGMT.CritterLabs.io — an <span class="gold">AI marketing team</span> in one cockpit.</h1>
+  <p class="sub">An SEO marketing platform for clients and our own sites — powered by a custom team of AI agents that work like a real SEO department, coordinating in a shared group chat.</p>
+</header>
+
+<section><div class="wrap">
+  <div class="win hero-art"><div class="bar"><i style="background:#F87171"></i><i style="background:#F5C842"></i><i style="background:#4ADE80"></i><span class="u">mgmt.critterlabs.io</span></div><div class="screen"><img src="images/critterlabs-hq.png" alt="CritterLabs MGMT HQ"></div></div>
+  <div class="cs-meta">
+    <div><div class="k">Product</div><div class="v">SEO marketing platform</div></div>
+    <div><div class="k">Role</div><div class="v">Design + full build</div></div>
+    <div><div class="k">Stack</div><div class="v">JS · GSC / GA4 / PageSpeed · multi-agent AI</div></div>
+    <div><div class="k">Status</div><div class="v green">Live</div></div>
+  </div>
+  <div class="cs-body">
+    <h3>The challenge</h3>
+    <p>Running SEO across multiple sites — for clients and in-house — means juggling rank tracking, technical audits, content, link building, and reporting. Doing it well usually takes a full team. The goal was to compress that team into one tool that actually does the work, not just displays charts.</p>
+    <h3>What we built</h3>
+    <p>An SEO marketing platform that monitors every site's health, organic performance, and spend in one cockpit — and a <b>custom AI agent marketing team</b> behind it. Each agent owns a role: Senior SEO, Technical SEO, SEO Marketer, SEO PM, and Link Builder. They collaborate in a shared group chat, hand off tasks, and produce reports and decisions the way a real department would.</p>
+    <h3>How it works</h3>
+    <p>The dashboard pulls live data (Search Console, Analytics, PageSpeed, and more) and rolls it into per-project health scores, briefs, and a daily check. Work routes to the right agent; the PM agent coordinates, the specialists execute, and the group chat keeps everything in one thread — so the operator reviews and approves rather than doing it all by hand.</p>
+    <h3>The outcome</h3>
+    <p>One person can run SEO operations across a portfolio of sites with the leverage of a full team. It's the clearest proof of the model behind our All-Star tier: a cockpit plus custom AI agents trained for a specific domain.</p>
+  </div>
+</div></section>
+
+<div class="wrap"><div class="final">
+  <h2 class="display">Want a custom AI team for your operation?</h2>
+  <p>The All-Star tier builds domain-trained agents into your HQ.</p>
+  <a class="btn btn-gold" href="contact.html">Book my scoping call</a>
+</div></div>
+
+<footer><div class="wrap foot">
+  <div>© 2026 CritterLabs — AI &amp; Algorithmic Engineering Studio</div>
+  <div class="links"><a href="index.html">Home</a><a href="about.html">About</a><a href="offer.html">Service</a><a href="work.html">Work</a></div>
+</div></footer>
+</body></html>

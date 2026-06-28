@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Members.Stoptions.ai — Case Study — CritterLabs HQ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Special+Elite&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav><div class="wrap navin">
+  <a class="logo" href="index.html"><span class="mark"></span>Critter<b>Labs</b>&nbsp;HQ</a>
+  <div class="navlinks">
+    <a href="index.html">Home</a><a href="about.html">About</a><a href="offer.html">Service</a>
+    <a href="work.html" class="active">Work</a><a href="contact.html">Contact</a>
+    <a href="contact.html" class="btn btn-gold">Book a call</a>
+  </div>
+</div></nav>
+
+<header class="wrap phead">
+  <a class="backlink" href="work.html">← All work</a>
+  <div class="kicker" style="margin-top:14px">Case study</div>
+  <h1 class="display">Members.Stoptions.ai — one screen for the <span class="gold">whole options picture</span>.</h1>
+  <p class="sub">The members area for Stoptions.ai: a live options command center that pulls a Polygon options chain, stock data, and a stack of other feeds into a single, scored dashboard.</p>
+</header>
+
+<section><div class="wrap">
+  <div class="win hero-art"><div class="bar"><i style="background:#F87171"></i><i style="background:#F5C842"></i><i style="background:#4ADE80"></i><span class="u">members.stoptions.ai</span></div><div class="screen"><img src="images/hero.png" alt="Stoptions members morning brief"></div></div>
+  <div class="cs-meta">
+    <div><div class="k">Product</div><div class="v">Stoptions members area</div></div>
+    <div><div class="k">Role</div><div class="v">Design + full build</div></div>
+    <div><div class="k">Stack</div><div class="v">Polygon/Massive · QuantConnect · LSTM · vanilla JS</div></div>
+    <div><div class="k">Status</div><div class="v green">Live · daily</div></div>
+  </div>
+  <div class="cs-body">
+    <h3>The challenge</h3>
+    <p>Options decisions depend on data that lives in a dozen places — the live option chain, underlying stock data, IV and Greeks, relative strength, and conviction signals. Members needed all of it aggregated, scored, and ranked in one place, refreshed and ready before the open.</p>
+    <h3>What we built</h3>
+    <p>A members-only dashboard that pulls a live Polygon (now Massive) option-chain feed, stock data, and several other market feeds, and aggregates them into a single command center. Each candidate becomes a full trade card — entry, target, stop, DTE, R/R, Greeks — scored by an LSTM model, with a daily AI morning brief summarizing the regime, what changed, and where the risk is.</p>
+    <h3>How it works</h3>
+    <p>An algorithm fires on schedule, fetches the chain and supporting feeds through async API calls, scores every pick, and pushes the results downstream to the dashboard. A learning loop logs every pick and outcome so the model improves over time, and a guardian model re-scores open positions through the day with cut-or-hold guidance. The front end is pure, fast vanilla JS.</p>
+    <h3>The outcome</h3>
+    <p>Members open one screen each morning instead of stitching together a broker, a chart, and spreadsheets — the day's best setups, full risk context, and an AI second opinion already waiting. The architecture (aggregate feeds → normalize → score → surface → brief) is the blueprint behind every HQ we build.</p>
+  </div>
+  <div class="cs-shot win"><div class="bar"><i style="background:#F87171"></i><i style="background:#F5C842"></i><i style="background:#4ADE80"></i><span class="u">members.stoptions.ai/learning</span></div><div class="screen"><img src="images/stoptions.png" alt="Stoptions AI learning journey"></div></div>
+</div></section>
+
+<div class="wrap"><div class="final">
+  <h2 class="display">Want this kind of HQ for your world?</h2>
+  <p>Every package follows the same proven architecture — scoped to your data and your decisions.</p>
+  <a class="btn btn-gold" href="contact.html">Book my scoping call</a>
+</div></div>
+
+<footer><div class="wrap foot">
+  <div>© 2026 CritterLabs — AI &amp; Algorithmic Engineering Studio</div>
+  <div class="links"><a href="index.html">Home</a><a href="about.html">About</a><a href="offer.html">Service</a><a href="work.html">Work</a></div>
+</div></footer>
+</body></html>

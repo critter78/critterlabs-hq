@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ritter.Farm — Case Study — CritterLabs HQ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Special+Elite&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav><div class="wrap navin">
+  <a class="logo" href="index.html"><span class="mark"></span>Critter<b>Labs</b>&nbsp;HQ</a>
+  <div class="navlinks">
+    <a href="index.html">Home</a><a href="about.html">About</a><a href="offer.html">Service</a>
+    <a href="work.html" class="active">Work</a><a href="contact.html">Contact</a>
+    <a href="contact.html" class="btn btn-gold">Book a call</a>
+  </div>
+</div></nav>
+
+<header class="wrap phead">
+  <a class="backlink" href="work.html">← All work</a>
+  <div class="kicker" style="margin-top:14px">Case study</div>
+  <h1 class="display">Ritter.Farm — a calmer way to <span class="gold">co-parent</span>.</h1>
+  <p class="sub">A co-parenting app for divorced and separated families: one shared, neutral source of truth with chat, scheduling, expenses, and a custom AI agent to smooth the day-to-day.</p>
+</header>
+
+<section><div class="wrap">
+  <div class="win hero-art"><div class="bar"><i style="background:#F87171"></i><i style="background:#F5C842"></i><i style="background:#4ADE80"></i><span class="u">ritter.farm</span></div><div class="screen"><img src="images/ritter.png" alt="Ritter Farm family HQ"></div></div>
+  <div class="cs-meta">
+    <div><div class="k">Product</div><div class="v">Co-parenting app</div></div>
+    <div><div class="k">Role</div><div class="v">Design + full build</div></div>
+    <div><div class="k">Stack</div><div class="v">JS · chat · custom AI agent · calendar / expenses</div></div>
+    <div><div class="k">Status</div><div class="v green">Live</div></div>
+  </div>
+  <div class="cs-body">
+    <h3>The challenge</h3>
+    <p>Co-parenting across two households runs on scattered texts, mismatched calendars, and money owed back and forth — friction that's stressful for parents and kids alike. The need: one neutral place both sides trust, where the schedule, the messages, and the expenses all agree.</p>
+    <h3>What we built</h3>
+    <p>A family HQ for separated and divorced parents. It brings together a built-in <b>chat</b>, a shared <b>schedule and calendar</b>, an <b>expenses</b> ledger with reimbursements, an info bank for documents and contacts, and a <b>custom AI agent</b> that helps coordinate handoffs, reminders, and the small logistics that usually cause friction.</p>
+    <h3>How it works</h3>
+    <p>Both parents (and the kids' info) live in one workspace. The calendar shows handoffs and activities; the expenses tab tracks who paid what and who owes whom; chat keeps communication in one civil, on-record place; and the AI agent surfaces what's coming up and nudges the routine along. Everything is one source of truth, accessible to both sides.</p>
+    <h3>The outcome</h3>
+    <p>The same HQ thinking that powers our trading dashboards, applied to family life — less back-and-forth, fewer dropped balls, and a calmer shared system. Proof that the model fits any operator who needs their world on one screen.</p>
+  </div>
+</div></section>
+
+<div class="wrap"><div class="final">
+  <h2 class="display">Need a shared HQ for your team or family?</h2>
+  <p>One source of truth, built around how you actually operate.</p>
+  <a class="btn btn-gold" href="contact.html">Book my scoping call</a>
+</div></div>
+
+<footer><div class="wrap foot">
+  <div>© 2026 CritterLabs — AI &amp; Algorithmic Engineering Studio</div>
+  <div class="links"><a href="index.html">Home</a><a href="about.html">About</a><a href="offer.html">Service</a><a href="work.html">Work</a></div>
+</div></footer>
+</body></html>

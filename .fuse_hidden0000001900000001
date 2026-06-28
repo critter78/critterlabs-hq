@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CritterLabs HQ — Custom Trading Dashboards &amp; AI Co-Pilots</title>
+<meta name="description" content="We design and build custom trading HQs — every position, metric, and signal on one screen, with an AI co-pilot reading it for you every day.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Special+Elite&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav><div class="wrap navin">
+  <a class="logo" href="index.html"><span class="mark"></span>Critter<b>Labs</b>&nbsp;HQ</a>
+  <div class="navlinks">
+    <a href="index.html" class="active">Home</a>
+    <a href="about.html">About</a>
+    <a href="offer.html">Service</a>
+    <a href="work.html">Work</a>
+    <a href="contact.html">Contact</a>
+    <a href="contact.html" class="btn btn-gold">Book a call</a>
+  </div>
+</div></nav>
+
+<header class="wrap phead">
+  <div class="hero-grid">
+    <div>
+      <div class="kicker">AI &amp; Algorithmic Engineering Studio</div>
+      <h1 class="display">One <span class="gold">HQ</span> for everything you watch all day. <span class="blue">Read by AI</span>, every morning.</h1>
+      <p class="sub">Your data is scattered across your broker, your charts, three spreadsheets, and a journal you stopped updating. We build you a single command center — positions, P&amp;L, edge signals, risk — and an AI co-pilot that tells you what actually matters today.</p>
+      <div class="cta-row">
+        <a class="btn btn-gold" href="contact.html">Book a scoping call</a>
+        <a class="btn btn-ghost" href="offer.html">See the packages →</a>
+      </div>
+    </div>
+    <div class="hero-art">
+      <div class="win">
+        <div class="bar"><i style="background:#F87171"></i><i style="background:#F5C842"></i><i style="background:#4ADE80"></i><span class="u">members.stoptions.ai</span></div>
+        <div class="screen"><img src="images/hero.png" alt="Stoptions.ai morning brief dashboard"></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section><div class="wrap">
+  <div class="eyebrow">What we do</div>
+  <h2 class="display">We build the screen you wish you had.</h2>
+  <div class="grid grid-3">
+    <div class="feat"><span class="ic">// 01</span><h4>Wired to your stack</h4><p>Connected to your broker and data feeds — live P&amp;L, positions, exposure, watchlists, in one place.</p></div>
+    <div class="feat"><span class="ic">// 02</span><h4>A daily AI brief</h4><p>Every morning: what changed, what to watch, where your risk is. The signal, not the noise.</p></div>
+    <div class="feat"><span class="ic">// 03</span><h4>Alerts on your lines</h4><p>Pinged when the metrics you care about cross the thresholds you set. Stop babysitting tabs.</p></div>
+    <div class="feat"><span class="ic">// 04</span><h4>Designed, not generic</h4><p>A dark, dense, fast interface built around how you actually work — never an off-the-shelf template.</p></div>
+    <div class="feat"><span class="ic">// 05</span><h4>Hosted &amp; maintained</h4><p>We host it, monitor it, and fix it when an upstream API changes. It just works.</p></div>
+    <div class="feat"><span class="ic">// 06</span><h4>Grows with you</h4><p>Add lenses, integrations, and custom AI agents as your needs evolve. Your HQ keeps up.</p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="eyebrow">Selected work</div>
+  <h2 class="display">Real builds. Real data. Live now.</h2>
+  <p class="lead">A few of the production systems we've designed and shipped.</p>
+  <div class="showcase">
+    <a class="card" href="work-stoptions.html"><div class="win"><div class="bar"><i style="background:#F87171"></i><i style="background:#F5C842"></i><i style="background:#4ADE80"></i><span class="u">stoptions.ai</span></div><div class="screen"><img src="images/stoptions.png" alt=""></div></div><div class="meta"><div class="t">STOPTIONS.AI</div><div class="d">Options scanner + AI learning engine with daily briefs.</div></div></a>
+    <a class="card" href="work-breakpoint.html"><div class="win"><div class="bar"><i style="background:#F87171"></i><i style="background:#F5C842"></i><i style="background:#4ADE80"></i><span class="u">breakpointbetting.net</span></div><div class="screen"><img src="images/breakpoint.png" alt=""></div></div><div class="meta"><div class="t">BREAKPOINT</div><div class="d">Tennis edge-signal engine &amp; auto-trader.</div></div></a>
+    <a class="card" href="work-critterlabs.html"><div class="win"><div class="bar"><i style="background:#F87171"></i><i style="background:#F5C842"></i><i style="background:#4ADE80"></i><span class="u">mgmt.critterlabs.io</span></div><div class="screen"><img src="images/critterlabs-hq.png" alt=""></div></div><div class="meta"><div class="t">CRITTERLABS HQ</div><div class="d">Multi-project operational cockpit.</div></div></a>
+    <a class="card" href="work-nba.html"><div class="win"><div class="bar"><i style="background:#F87171"></i><i style="background:#F5C842"></i><i style="background:#4ADE80"></i><span class="u">nba.critterlabs.io</span></div><div class="screen"><img src="images/nba.png" alt=""></div></div><div class="meta"><div class="t">NBA COMEBACK RADAR</div><div class="d">Real-time in-play model &amp; P&amp;L tracker.</div></div></a>
+    <a class="card" href="work-ritter.html"><div class="win"><div class="bar"><i style="background:#F87171"></i><i style="background:#F5C842"></i><i style="background:#4ADE80"></i><span class="u">ritter.farm</span></div><div class="screen"><img src="images/ritter.png" alt=""></div></div><div class="meta"><div class="t">RITTER FARM</div><div class="d">A private family HQ — one source of truth.</div></div></a>
+    <a class="card cta" href="contact.html"><div class="win" style="border-style:dashed;display:flex;align-items:center;justify-content:center;min-height:100%"><div style="padding:30px 18px;text-align:center"><div class="display gold" style="font-size:1.9rem">Your HQ next?</div><div style="color:var(--muted);font-size:.8rem;margin-top:8px">Book a scoping call →</div></div></div></a>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="eyebrow">Packages</div>
+  <h2 class="display">Three ways to start.</h2>
+  <div class="tiers">
+    <div class="tier"><div class="badge">&nbsp;</div><div class="name">ENTRY</div><div class="tagline">One clean dashboard, live and watched.</div><div class="price"><span class="num">$2,500</span> <small>build</small></div><div class="permo">+ $250/mo</div><ul><li>1 dashboard, 1–2 data sources</li><li>Daily AI brief</li><li>Hosting &amp; maintenance</li></ul><a class="btn btn-ghost" href="offer.html">Details</a></div>
+    <div class="tier featured"><div class="badge">Most popular</div><div class="name">PRO</div><div class="tagline">A multi-source HQ with alerts &amp; automation.</div><div class="price"><span class="num">$6,500</span> <small>build</small></div><div class="permo">+ $650/mo</div><ul><li>Multi-source, custom layout</li><li>AI metric-surfacing + alerts</li><li>Priority support</li></ul><a class="btn btn-gold" href="offer.html">Details</a></div>
+    <div class="tier"><div class="badge">&nbsp;</div><div class="name">ALL-STAR</div><div class="tagline">A full cockpit with custom AI agents.</div><div class="price"><span class="num">$12,000</span> <small>build</small></div><div class="permo">+ $1,200/mo</div><ul><li>Multiple lenses, deep integrations</li><li>Custom AI agent(s)</li><li>Ongoing iteration</li></ul><a class="btn btn-ghost" href="offer.html">Details</a></div>
+  </div>
+</div></section>
+
+<div class="wrap"><div class="final">
+  <h2 class="display">Stop tab-hopping. Start with one screen.</h2>
+  <p>Book a 20-minute scoping call. We'll tell you exactly what's possible with your data — and what it'll cost — before you commit a dollar.</p>
+  <a class="btn btn-gold" href="contact.html">Book my scoping call</a>
+</div></div>
+
+<footer><div class="wrap foot">
+  <div>© 2026 CritterLabs — AI &amp; Algorithmic Engineering Studio</div>
+  <div class="links"><a href="about.html">About</a><a href="offer.html">Service</a><a href="work.html">Work</a><a href="contact.html">Contact</a><a href="https://stoptions.ai" target="_blank" rel="noopener">stoptions.ai</a></div>
+</div></footer>
+
+</body></html>

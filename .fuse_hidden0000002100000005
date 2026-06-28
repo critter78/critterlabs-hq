@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact — CritterLabs HQ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Special+Elite&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav><div class="wrap navin">
+  <a class="logo" href="index.html"><span class="mark"></span>Critter<b>Labs</b>&nbsp;HQ</a>
+  <div class="navlinks">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="offer.html">Service</a>
+    <a href="work.html">Work</a>
+    <a href="contact.html" class="active">Contact</a>
+    <a href="contact.html" class="btn btn-gold">Book a call</a>
+  </div>
+</div></nav>
+
+<header class="wrap phead">
+  <div class="kicker">Contact</div>
+  <h1 class="display">Let's map your <span class="gold">HQ</span>.</h1>
+  <p class="sub">Tell us what you're trying to see every day and where your data lives. We'll reply with whether it's a clean build or needs a closer look — and book the $250 scoping call.</p>
+</header>
+
+<section><div class="wrap">
+  <div class="contact-grid">
+    <form class="cform" onsubmit="alert('Demo form — wire this to Formspree, your inbox, or a backend.');return false;">
+      <div class="field"><label>Name</label><input type="text" placeholder="Your name" required></div>
+      <div class="field"><label>Email</label><input type="email" placeholder="you@email.com" required></div>
+      <div class="field"><label>What do you trade / manage?</label><input type="text" placeholder="e.g. options day trading, small RIA, family office"></div>
+      <div class="field"><label>Package you're eyeing</label>
+        <select>
+          <option>Not sure yet — help me choose</option>
+          <option>Entry — $2,500 + $250/mo</option>
+          <option>Pro — $6,500 + $650/mo</option>
+          <option>All-Star — $12,000 + $1,200/mo</option>
+        </select>
+      </div>
+      <div class="field"><label>Where does your data live?</label><textarea placeholder="Broker, market data, spreadsheets, anything you'd want on the dashboard…"></textarea></div>
+      <button class="btn btn-gold" type="submit" style="width:100%">Send &amp; request scoping call</button>
+      <p class="note" style="margin-top:12px">Prefer to book directly? Use the calendar link →</p>
+    </form>
+
+    <div class="cinfo">
+      <div class="row"><div class="k">Book a call</div><div class="v"><a href="#" style="color:var(--gold)">[Your Calendly link]</a> — 20 min, $250 (credited to your build)</div></div>
+      <div class="row"><div class="k">Email</div><div class="v">hello@critterlabs.io</div></div>
+      <div class="row"><div class="k">Studio</div><div class="v">CritterLabs — AI &amp; Algorithmic Engineering</div></div>
+      <div class="row"><div class="k">Live work</div><div class="v"><a href="https://stoptions.ai" target="_blank" rel="noopener">stoptions.ai</a> · <a href="https://critterlabs.io" target="_blank" rel="noopener">critterlabs.io</a></div></div>
+      <div class="row"><div class="k">What happens next</div><div class="v">We review your data sources, confirm feasibility, and send a short proposal with a fixed price and timeline before any build starts.</div></div>
+    </div>
+  </div>
+</div></section>
+
+<footer><div class="wrap foot">
+  <div>© 2026 CritterLabs — AI &amp; Algorithmic Engineering Studio</div>
+  <div class="links"><a href="index.html">Home</a><a href="about.html">About</a><a href="offer.html">Service</a><a href="work.html">Work</a></div>
+</div></footer>
+
+</body></html>

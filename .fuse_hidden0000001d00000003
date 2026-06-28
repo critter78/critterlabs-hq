@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Service &amp; Packages — CritterLabs HQ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Special+Elite&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav><div class="wrap navin">
+  <a class="logo" href="index.html"><span class="mark"></span>Critter<b>Labs</b>&nbsp;HQ</a>
+  <div class="navlinks">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="offer.html" class="active">Service</a>
+    <a href="work.html">Work</a>
+    <a href="contact.html">Contact</a>
+    <a href="contact.html" class="btn btn-gold">Book a call</a>
+  </div>
+</div></nav>
+
+<header class="wrap phead">
+  <div class="kicker">The service</div>
+  <h1 class="display">Three HQ designs. <span class="gold">Build once</span>, <span class="blue">keep it running</span>.</h1>
+  <p class="sub">A one-time build fee gets your dashboard designed, wired to your data, and shipped. A simple monthly keeps it hosted, fed with live data, monitored, and intelligent — so it never goes stale.</p>
+</header>
+
+<section><div class="wrap">
+  <div class="tiers">
+    <div class="tier">
+      <div class="badge">&nbsp;</div>
+      <div class="name">ENTRY</div>
+      <div class="tagline">One clean dashboard, live and watched.</div>
+      <div class="price"><span class="num">$2,500</span> <small>build</small></div>
+      <div class="permo">+ $250/mo</div>
+      <ul>
+        <li>1 dashboard</li>
+        <li>1–2 data sources</li>
+        <li>Standard widget library &amp; layout</li>
+        <li>Daily AI brief</li>
+        <li>Hosting, monitoring &amp; maintenance</li>
+        <li>Email support</li>
+      </ul>
+      <a class="btn btn-ghost" href="contact.html">Start with Entry</a>
+    </div>
+    <div class="tier featured">
+      <div class="badge">Most popular</div>
+      <div class="name">PRO</div>
+      <div class="tagline">A multi-source HQ with alerts &amp; automation.</div>
+      <div class="price"><span class="num">$6,500</span> <small>build</small></div>
+      <div class="permo">+ $650/mo</div>
+      <ul>
+        <li>Multi-source HQ (several feeds)</li>
+        <li>Custom layout &amp; multiple lenses</li>
+        <li>AI metric-surfacing + smart alerts</li>
+        <li>Light automation &amp; scheduled jobs</li>
+        <li>Priority hosting &amp; support</li>
+        <li>Quarterly iteration pass</li>
+      </ul>
+      <a class="btn btn-gold" href="contact.html">Build my Pro HQ</a>
+    </div>
+    <div class="tier">
+      <div class="badge">&nbsp;</div>
+      <div class="name">ALL-STAR</div>
+      <div class="tagline">A full cockpit with custom AI agents.</div>
+      <div class="price"><span class="num">$12,000</span> <small>build</small></div>
+      <div class="permo">+ $1,200/mo</div>
+      <ul>
+        <li>Full HQ, multiple lenses &amp; views</li>
+        <li>Custom AI agent(s) trained on your domain</li>
+        <li>Deep / bespoke integrations</li>
+        <li>Ongoing iteration &amp; roadmap</li>
+        <li>Priority everything, direct line</li>
+        <li>Monthly strategy check-in</li>
+      </ul>
+      <a class="btn btn-ghost" href="contact.html">Go All-Star</a>
+    </div>
+  </div>
+  <p class="note" style="text-align:center;margin-top:18px">Every engagement starts with a <span class="gold">$250 scoping call</span> — credited toward your build.</p>
+</div></section>
+
+<section><div class="wrap">
+  <div class="eyebrow">Compare</div>
+  <h2 class="display">What's in each package.</h2>
+  <div class="table-wrap"><table class="spec">
+    <thead><tr><th>Feature</th><th>Entry</th><th>Pro</th><th>All-Star</th></tr></thead>
+    <tbody>
+      <tr><td>Dashboards / lenses</td><td>1</td><td>Multiple</td><td>Multiple + views</td></tr>
+      <tr><td>Data sources</td><td>1–2</td><td>Several</td><td>Unlimited / bespoke</td></tr>
+      <tr><td>Design</td><td>Standard library</td><td>Custom layout</td><td>Fully bespoke</td></tr>
+      <tr><td>Daily AI brief</td><td>✓</td><td>✓</td><td>✓</td></tr>
+      <tr><td>Smart alerts</td><td>—</td><td>✓</td><td>✓</td></tr>
+      <tr><td>Automation</td><td>—</td><td>Light</td><td>Advanced</td></tr>
+      <tr><td>Custom AI agent(s)</td><td>—</td><td>—</td><td>✓</td></tr>
+      <tr><td>Integrations</td><td>Standard</td><td>Standard+</td><td>Deep / custom</td></tr>
+      <tr><td>Support</td><td>Email</td><td>Priority</td><td>Direct line</td></tr>
+      <tr><td>Iteration</td><td>—</td><td>Quarterly</td><td>Ongoing</td></tr>
+      <tr><td>Hosting &amp; maintenance</td><td>✓</td><td>✓</td><td>✓</td></tr>
+      <tr><td>Typical build time</td><td>1–2 weeks</td><td>2–4 weeks</td><td>4–8 weeks</td></tr>
+      <tr><td><b>Build fee</b></td><td><b>$2,500</b></td><td><b>$6,500</b></td><td><b>$12,000</b></td></tr>
+      <tr><td><b>Monthly</b></td><td><b>$250</b></td><td><b>$650</b></td><td><b>$1,200</b></td></tr>
+    </tbody>
+  </table></div>
+  <p class="note" style="margin-top:14px">The monthly covers hosting, live data feeds, monitoring, maintenance, and AI inference — it's what keeps your HQ live and accurate, not an optional add-on.</p>
+</div></section>
+
+<section><div class="wrap">
+  <div class="eyebrow">How it works</div>
+  <h2 class="display">Scattered to one screen in weeks.</h2>
+  <div class="grid grid-4">
+    <div class="feat"><span class="ic">// 1</span><h4>Scoping call</h4><p>We map your data sources and what you need to see every day.</p></div>
+    <div class="feat"><span class="ic">// 2</span><h4>Wire the data</h4><p>We connect your feeds and normalize everything into one source of truth.</p></div>
+    <div class="feat"><span class="ic">// 3</span><h4>Build the HQ</h4><p>Your custom dashboard + AI brief, designed around how you work.</p></div>
+    <div class="feat"><span class="ic">// 4</span><h4>Run &amp; refine</h4><p>We host, monitor, and iterate. It keeps working — and keeps getting smarter.</p></div>
+  </div>
+</div></section>
+
+<div class="wrap"><div class="final">
+  <h2 class="display">Not sure which tier fits?</h2>
+  <p>Book the $250 scoping call. We'll map your data, recommend a package, and credit the fee toward your build.</p>
+  <a class="btn btn-gold" href="contact.html">Book my scoping call</a>
+</div></div>
+
+<footer><div class="wrap foot">
+  <div>© 2026 CritterLabs — AI &amp; Algorithmic Engineering Studio</div>
+  <div class="links"><a href="index.html">Home</a><a href="about.html">About</a><a href="work.html">Work</a><a href="contact.html">Contact</a></div>
+</div></footer>
+
+</body></html>
