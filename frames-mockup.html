@@ -8,139 +8,126 @@
 <link rel="stylesheet" href="style.css">
 <style>
   body{min-height:100vh}
-  .mw{max-width:840px;margin:0 auto;padding:60px 22px 100px}
+  .mw{max-width:860px;margin:0 auto;padding:60px 22px 110px}
   .mw h1{font-family:var(--display);color:var(--gold);font-size:2.6rem;margin:0 0 6px}
   .mw .intro{color:var(--text-dim);font-size:.95rem;margin-bottom:10px}
-  .opt{margin:64px 0}
+  .opt{margin:60px 0}
   .opt-lbl{font-family:var(--stencil);color:var(--gold);font-size:.78rem;letter-spacing:3px;text-transform:uppercase;margin-bottom:4px}
   .opt-note{color:var(--muted);font-size:.82rem;margin-bottom:20px}
 
-  /* ---- shared faux "animation screen" (mimics the real video still) ---- */
-  .demo{position:relative;aspect-ratio:16/9;background:#0a0e16;border-radius:8px;overflow:hidden;display:flex;flex-direction:column;padding:22px 26px}
-  .demo .eb{font-family:var(--mono);color:#3ddc84;font-size:.6rem;letter-spacing:.18em;font-weight:600}
-  .demo .ti{font-family:var(--display);color:#eef2f8;font-size:1.7rem;line-height:1.05;margin:4px 0 10px}
-  .demo .st{font-family:var(--mono);color:#7f8b9e;font-size:.66rem;letter-spacing:.06em}
-  .demo .mini{position:absolute;right:26px;top:54px;width:40%;border-radius:6px;border:1px solid #1f2937;box-shadow:0 10px 24px rgba(0,0,0,.5)}
-  .demo .rail{margin-top:auto;display:flex;align-items:center;gap:0;justify-content:space-between}
+  /* ---- shared faux "animation screen" (bg matches the real video: #0a0e16) ---- */
+  .demo{position:relative;aspect-ratio:16/9;background:#0a0e16;overflow:hidden;display:flex;flex-direction:column;padding:20px 24px}
+  .demo .eb{font-family:var(--mono);color:#3ddc84;font-size:.58rem;letter-spacing:.18em;font-weight:600}
+  .demo .ti{font-family:var(--display);color:#eef2f8;font-size:1.55rem;line-height:1.05;margin:3px 0 9px}
+  .demo .st{font-family:var(--mono);color:#7f8b9e;font-size:.62rem;letter-spacing:.06em}
+  .demo .mini{position:absolute;right:24px;top:50px;width:40%;border-radius:6px;border:1px solid #1f2937;box-shadow:0 10px 24px rgba(0,0,0,.5)}
+  .demo .rail{margin-top:auto;display:flex;align-items:center;justify-content:space-between}
   .demo .rail i{flex:1;height:1px;background:#2a3a2c}
-  .demo .rail b{width:9px;height:9px;border-radius:50%;background:#0a0e16;border:2px solid #f5b53f;flex:none;margin:0 -2px;position:relative;z-index:2}
-  .demo .rail b.on{background:#f5b53f;box-shadow:0 0 10px #f5b53f}
-  .demo .sound{position:absolute;top:20px;right:24px;font-family:var(--mono);color:#3ddc84;font-size:.55rem;letter-spacing:.12em;border:1px solid #1f3a2a;border-radius:14px;padding:4px 9px}
+  .demo .rail b{width:8px;height:8px;border-radius:50%;background:#0a0e16;border:2px solid #f5b53f;flex:none;margin:0 -2px;position:relative;z-index:2}
+  .demo .rail b.on{background:#f5b53f;box-shadow:0 0 9px #f5b53f}
+  .demo .sound{position:absolute;top:18px;right:22px;font-family:var(--mono);color:#3ddc84;font-size:.52rem;letter-spacing:.12em;border:1px solid #1f3a2a;border-radius:14px;padding:4px 8px}
 
-  /* ============ OPTION 1 — OLD TV ============ */
-  .tv{background:linear-gradient(160deg,#322c25,#191510);border:1px solid #453d31;border-radius:26px;padding:26px 30px 22px;box-shadow:0 30px 60px rgba(0,0,0,.55),inset 0 1px 0 rgba(255,255,255,.06);position:relative}
-  .tv .cab{background:#070707;border-radius:16px;padding:12px;box-shadow:inset 0 0 34px #000,inset 0 0 0 2px #2a2620}
-  .tv .demo{border-radius:12px}
-  .tv .ctrls{display:flex;align-items:center;justify-content:flex-end;gap:14px;margin-top:14px}
-  .tv .knob{width:26px;height:26px;border-radius:50%;background:radial-gradient(circle at 34% 30%,#6b6052,#241f18);box-shadow:0 2px 4px rgba(0,0,0,.6),inset 0 -2px 3px rgba(0,0,0,.5)}
-  .tv .grille{flex:1;height:18px;border-radius:4px;background:repeating-linear-gradient(90deg,#1c1813,#1c1813 3px,#0d0b08 3px,#0d0b08 6px);max-width:120px}
-  .tv-legs{display:flex;justify-content:space-between;width:64%;margin:0 auto;padding:0 8%}
-  .tv-legs span{width:14px;height:46px;background:linear-gradient(#322c25,#15110c);border-radius:0 0 6px 6px;transform-origin:top}
-  .tv-legs span:first-child{transform:rotate(10deg)} .tv-legs span:last-child{transform:rotate(-10deg)}
+  /* ============ OPTION 1 — TV (4 materials) ============ */
+  /* material tokens live on .tvset so the cabinet + legs share them */
+  .tvset{--c1:#322c25;--c2:#191510;--bd:#453d31;--grain:transparent}
+  .tvset.silver{--c1:#eef1f4;--c2:#aab0b7;--bd:#cfd4da}
+  .tvset.steel{--c1:#4a5058;--c2:#2c3138;--bd:#5b626a}
+  .tvset.oak{--c1:#c08e50;--c2:#7c5025;--bd:#6e4a22;--grain:repeating-linear-gradient(91deg,rgba(0,0,0,.05) 0 2px,rgba(255,255,255,.03) 2px 8px)}
+  .tv{background:var(--grain),linear-gradient(160deg,var(--c1),var(--c2));border:1px solid var(--bd);border-radius:24px;padding:22px 26px 18px;box-shadow:0 30px 60px rgba(0,0,0,.5),inset 0 1px 0 rgba(255,255,255,.12)}
+  .tvset.steel .tv{box-shadow:0 24px 50px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.05)} /* matte: softer sheen */
+  /* dark bezel + screen are ONE continuous #0a0e16 area = seamless */
+  .tv .cab{background:#0a0e16;border-radius:13px;padding:10px;box-shadow:inset 0 0 0 1px rgba(0,0,0,.6),0 2px 8px rgba(0,0,0,.5) inset}
+  .tv .demo{border-radius:6px}
+  .tv .ctrls{display:flex;align-items:center;justify-content:flex-end;gap:13px;margin-top:13px}
+  .tv .knob{width:24px;height:24px;border-radius:50%;background:radial-gradient(circle at 34% 30%,#6b6052,#241f18);box-shadow:0 2px 4px rgba(0,0,0,.5),inset 0 -2px 3px rgba(0,0,0,.5)}
+  .tvset.silver .knob,.tvset.steel .knob{background:radial-gradient(circle at 34% 30%,#e9edf1,#6c727a)}
+  .tv .grille{flex:1;max-width:120px;height:16px;border-radius:4px;background:repeating-linear-gradient(90deg,rgba(0,0,0,.35),rgba(0,0,0,.35) 3px,rgba(0,0,0,.12) 3px,rgba(0,0,0,.12) 6px)}
+  .tv-legs{display:flex;justify-content:space-between;width:60%;margin:0 auto;padding:0 8%}
+  .tv-legs span{width:14px;height:42px;background:linear-gradient(var(--c1),var(--c2));border-radius:0 0 6px 6px}
+  .tv-legs span:first-child{transform:rotate(9deg)} .tv-legs span:last-child{transform:rotate(-9deg)}
 
-  /* ============ OPTION 2 — THEATRE SPOTLIGHT ============ */
-  .spot{position:relative;padding:70px 46px 56px;border-radius:12px;background:radial-gradient(120% 90% at 50% -10%,rgba(245,200,66,.16),rgba(245,200,66,.04) 42%,transparent 64%),#070a10;overflow:hidden}
-  .spot::before{content:"";position:absolute;top:-40px;left:50%;width:0;height:0;transform:translateX(-50%);border-left:120px solid transparent;border-right:120px solid transparent;border-bottom:340px solid rgba(245,200,66,.06);filter:blur(6px)}
-  .spot .demo{box-shadow:0 0 70px rgba(245,200,66,.18),0 20px 50px rgba(0,0,0,.6);position:relative;z-index:2}
-  .spot .floor{position:absolute;left:0;right:0;bottom:0;height:60px;background:linear-gradient(rgba(245,200,66,.05),transparent)}
-
-  /* ============ OPTION 3 — BOLTED / RIVETED ============ */
-  .bolt{position:relative;background:linear-gradient(145deg,#222932,#10141a);border:2px solid #2d3640;border-radius:10px;padding:16px;box-shadow:inset 0 1px 0 rgba(255,255,255,.06),inset 0 0 0 1px rgba(0,0,0,.4),0 22px 46px rgba(0,0,0,.55)}
-  .bolt .demo{border-radius:5px;border:1px solid #000}
-  .bolt .rv{position:absolute;width:18px;height:18px;border-radius:50%;background:radial-gradient(circle at 36% 30%,#aeb6bf,#5b636c 55%,#2b3138 78%,#171b20);box-shadow:0 2px 3px rgba(0,0,0,.6),inset 0 -1px 2px rgba(0,0,0,.55),inset 0 1px 1px rgba(255,255,255,.4)}
-  .bolt .rv::after{content:"";position:absolute;inset:5px;border-radius:50%;background:linear-gradient(45deg,transparent 44%,#2b3138 44%,#2b3138 56%,transparent 56%),linear-gradient(-45deg,transparent 44%,#2b3138 44%,#2b3138 56%,transparent 56%)}
-  .bolt .rv.tl{top:7px;left:7px}.bolt .rv.tr{top:7px;right:7px}.bolt .rv.bl{bottom:7px;left:7px}.bolt .rv.br{bottom:7px;right:7px}
+  /* ============ OPTION 3 — BOLTED / RIVETED (screen fits inside the bolts) ============ */
+  .bolt{position:relative;background:linear-gradient(145deg,#232a33,#10141a);border:1px solid #2d3640;border-radius:12px;padding:34px;box-shadow:inset 0 1px 0 rgba(255,255,255,.06),0 22px 46px rgba(0,0,0,.55)}
+  .bolt .demo{border-radius:4px;box-shadow:0 0 0 1px #000,inset 0 0 0 1px rgba(255,255,255,.03)}
+  .bolt .rv{position:absolute;width:18px;height:18px;border-radius:50%;background:radial-gradient(circle at 36% 30%,#b3bbc4,#5d656e 55%,#2b3138 80%,#171b20);box-shadow:0 2px 3px rgba(0,0,0,.6),inset 0 -1px 2px rgba(0,0,0,.55),inset 0 1px 1px rgba(255,255,255,.4)}
+  .bolt .rv::after{content:"";position:absolute;inset:5px;border-radius:50%;background:linear-gradient(45deg,transparent 44%,#262c33 44%,#262c33 56%,transparent 56%),linear-gradient(-45deg,transparent 44%,#262c33 44%,#262c33 56%,transparent 56%)}
+  .bolt .rv.tl{top:9px;left:9px}.bolt .rv.tr{top:9px;right:9px}.bolt .rv.bl{bottom:9px;left:9px}.bolt .rv.br{bottom:9px;right:9px}
 
   /* ============ OPTION 4 — CURTAIN STAGE ============ */
-  .stage{position:relative;background:#080608;border:1px solid #2a0f12;border-radius:8px;overflow:hidden;padding:0}
-  .stage .demo{border-radius:0}
-  .valance{position:absolute;top:0;left:0;right:0;height:42px;z-index:4;background:repeating-linear-gradient(90deg,#6e0d12,#8a141a 26px,#5a0a0e 52px);box-shadow:0 6px 14px rgba(0,0,0,.5)}
-  .valance::after{content:"";position:absolute;bottom:-14px;left:0;right:0;height:18px;background:radial-gradient(14px 16px at 14px 0,#6e0d12 60%,transparent 62%) repeat-x;background-size:28px 18px}
-  .curtain{position:absolute;top:0;bottom:0;width:24%;z-index:3;background:repeating-linear-gradient(90deg,#5a0a0e,#86131a 14px,#4c080c 28px);box-shadow:inset -18px 0 26px rgba(0,0,0,.6)}
+  .stage{position:relative;background:#080608;border:1px solid #2a0f12;border-radius:8px;overflow:hidden}
+  .valance{position:absolute;top:0;left:0;right:0;height:40px;z-index:4;background:repeating-linear-gradient(90deg,#6e0d12,#8a141a 26px,#5a0a0e 52px);box-shadow:0 6px 14px rgba(0,0,0,.5)}
+  .curtain{position:absolute;top:0;bottom:0;width:23%;z-index:3;background:repeating-linear-gradient(90deg,#5a0a0e,#86131a 14px,#4c080c 28px);box-shadow:inset -18px 0 26px rgba(0,0,0,.6)}
   .curtain.l{left:0;border-radius:0 40% 0 0}
   .curtain.r{right:0;transform:scaleX(-1);border-radius:0 40% 0 0}
-  .stage .hint{position:absolute;left:0;right:0;bottom:8px;text-align:center;z-index:5;font-family:var(--mono);color:#caa;font-size:.6rem;letter-spacing:.1em}
+  .stage .hint{position:absolute;left:0;right:0;bottom:8px;text-align:center;z-index:5;font-family:var(--mono);color:#caa;font-size:.58rem;letter-spacing:.1em}
+  .stage .demo{padding-top:46px}
 
   .pick{margin-top:60px;text-align:center;color:var(--muted);font-size:.85rem;border-top:1px solid var(--border);padding-top:24px}
 </style>
 </head>
 <body>
 <div class="mw">
-  <div class="opt-lbl">Internal preview</div>
-  <h1>Frame the Animation — 4 Options</h1>
-  <p class="intro">Same screen, four "sets." Tell me the number you want and I'll wire the real animation into it (and onto the Process page). The inner panel here is a static stand-in for the video.</p>
+  <div class="opt-lbl">Internal preview · v2</div>
+  <h1>Frame the Animation</h1>
+  <p class="intro">Option 2 removed. Option 1 now seamless (the dark bezel + screen are one continuous colour) with four cabinet materials. Option 3 resized so the screen sits cleanly inside the bolts. Tell me which one (and which material) and I'll wire the real animation into it.</p>
 
-  <!-- OPTION 1 -->
+  <!-- OPTION 1 — ORIGINAL -->
   <div class="opt">
-    <div class="opt-lbl">Option 1 · Old TV in a stand</div>
-    <div class="opt-note">Retro cabinet, knobs + speaker grille, little angled legs. Charming, but the most "kitsch."</div>
-    <div class="tv">
-      <div class="cab">
-        <div class="demo">
-          <div class="sound">◂× SOUND OFF</div>
-          <div class="eb">HOW IT WORKS</div><div class="ti">From Scattered to One Screen</div>
-          <div class="st">// 05 — QA · we test everything end to end.</div>
-          <img class="mini" src="images/hp-stoptions.jpg" alt="">
-          <div class="rail"><b class="on"></b><i></i><b></b><i></i><b></b><i></i><b></b><i></i><b class="on"></b><i></i><b></b></div>
-        </div>
-      </div>
-      <div class="ctrls"><span class="grille"></span><span class="knob"></span><span class="knob"></span></div>
-    </div>
-    <div class="tv-legs"><span></span><span></span></div>
-  </div>
-
-  <!-- OPTION 2 -->
-  <div class="opt">
-    <div class="opt-lbl">Option 2 · Theatre spotlight</div>
-    <div class="opt-note">Soft beam from above, dark stage, glow on the screen. Elegant and low-key.</div>
-    <div class="spot">
-      <div class="demo">
-        <div class="sound">◂× SOUND OFF</div>
-        <div class="eb">HOW IT WORKS</div><div class="ti">From Scattered to One Screen</div>
-        <div class="st">// 05 — QA · we test everything end to end.</div>
-        <img class="mini" src="images/hp-stoptions.jpg" alt="">
-        <div class="rail"><b class="on"></b><i></i><b></b><i></i><b></b><i></i><b></b><i></i><b class="on"></b><i></i><b></b></div>
-      </div>
-      <div class="floor"></div>
+    <div class="opt-lbl">Option 1 · TV — Original (dark)</div>
+    <div class="tvset">
+      <div class="tv"><div class="cab"><div class="demo"><div class="sound">◂× SOUND OFF</div><div class="eb">HOW IT WORKS</div><div class="ti">From Scattered to One Screen</div><div class="st">// 05 — QA · we test everything end to end.</div><img class="mini" src="images/hp-stoptions.jpg" alt=""><div class="rail"><b class="on"></b><i></i><b></b><i></i><b></b><i></i><b></b><i></i><b class="on"></b><i></i><b></b></div></div></div><div class="ctrls"><span class="grille"></span><span class="knob"></span><span class="knob"></span></div></div>
+      <div class="tv-legs"><span></span><span></span></div>
     </div>
   </div>
 
-  <!-- OPTION 3 -->
+  <!-- OPTION 1 — SILVER -->
   <div class="opt">
-    <div class="opt-lbl">Option 3 · Bolted / riveted in <span style="color:var(--green)">— my pick</span></div>
-    <div class="opt-note">Precision metal frame with rivets in the four corners. Says "engineered, bolted into place." Most on-brand.</div>
+    <div class="opt-lbl">Option 1 · TV — Silver</div>
+    <div class="tvset silver">
+      <div class="tv"><div class="cab"><div class="demo"><div class="sound">◂× SOUND OFF</div><div class="eb">HOW IT WORKS</div><div class="ti">From Scattered to One Screen</div><div class="st">// 05 — QA · we test everything end to end.</div><img class="mini" src="images/hp-stoptions.jpg" alt=""><div class="rail"><b class="on"></b><i></i><b></b><i></i><b></b><i></i><b></b><i></i><b class="on"></b><i></i><b></b></div></div></div><div class="ctrls"><span class="grille"></span><span class="knob"></span><span class="knob"></span></div></div>
+      <div class="tv-legs"><span></span><span></span></div>
+    </div>
+  </div>
+
+  <!-- OPTION 1 — MATTE STEEL -->
+  <div class="opt">
+    <div class="opt-lbl">Option 1 · TV — Matte Steel</div>
+    <div class="tvset steel">
+      <div class="tv"><div class="cab"><div class="demo"><div class="sound">◂× SOUND OFF</div><div class="eb">HOW IT WORKS</div><div class="ti">From Scattered to One Screen</div><div class="st">// 05 — QA · we test everything end to end.</div><img class="mini" src="images/hp-stoptions.jpg" alt=""><div class="rail"><b class="on"></b><i></i><b></b><i></i><b></b><i></i><b></b><i></i><b class="on"></b><i></i><b></b></div></div></div><div class="ctrls"><span class="grille"></span><span class="knob"></span><span class="knob"></span></div></div>
+      <div class="tv-legs"><span></span><span></span></div>
+    </div>
+  </div>
+
+  <!-- OPTION 1 — OAK -->
+  <div class="opt">
+    <div class="opt-lbl">Option 1 · TV — Oak</div>
+    <div class="tvset oak">
+      <div class="tv"><div class="cab"><div class="demo"><div class="sound">◂× SOUND OFF</div><div class="eb">HOW IT WORKS</div><div class="ti">From Scattered to One Screen</div><div class="st">// 05 — QA · we test everything end to end.</div><img class="mini" src="images/hp-stoptions.jpg" alt=""><div class="rail"><b class="on"></b><i></i><b></b><i></i><b></b><i></i><b></b><i></i><b class="on"></b><i></i><b></b></div></div></div><div class="ctrls"><span class="grille"></span><span class="knob"></span><span class="knob"></span></div></div>
+      <div class="tv-legs"><span></span><span></span></div>
+    </div>
+  </div>
+
+  <!-- OPTION 3 — BOLTED (fixed) -->
+  <div class="opt">
+    <div class="opt-lbl">Option 3 · Bolted / riveted — screen now fits inside the bolts</div>
+    <div class="opt-note">Wider metal border so the screen sits clear of the rivets, with a clean recessed edge.</div>
     <div class="bolt">
       <span class="rv tl"></span><span class="rv tr"></span><span class="rv bl"></span><span class="rv br"></span>
-      <div class="demo">
-        <div class="sound">◂× SOUND OFF</div>
-        <div class="eb">HOW IT WORKS</div><div class="ti">From Scattered to One Screen</div>
-        <div class="st">// 05 — QA · we test everything end to end.</div>
-        <img class="mini" src="images/hp-stoptions.jpg" alt="">
-        <div class="rail"><b class="on"></b><i></i><b></b><i></i><b></b><i></i><b></b><i></i><b class="on"></b><i></i><b></b></div>
-      </div>
+      <div class="demo"><div class="sound">◂× SOUND OFF</div><div class="eb">HOW IT WORKS</div><div class="ti">From Scattered to One Screen</div><div class="st">// 05 — QA · we test everything end to end.</div><img class="mini" src="images/hp-stoptions.jpg" alt=""><div class="rail"><b class="on"></b><i></i><b></b><i></i><b></b><i></i><b></b><i></i><b class="on"></b><i></i><b></b></div></div>
     </div>
   </div>
 
-  <!-- OPTION 4 -->
+  <!-- OPTION 4 — CURTAIN (kept) -->
   <div class="opt">
-    <div class="opt-lbl">Option 4 · Curtain stage</div>
-    <div class="opt-note">Red velvet curtains that part on play (shown open here) + a valance. Biggest "wow", furthest from the palette.</div>
+    <div class="opt-lbl">Option 4 · Curtain stage (still on the table)</div>
     <div class="stage">
-      <div class="valance"></div>
-      <div class="curtain l"></div>
-      <div class="curtain r"></div>
-      <div class="demo" style="padding:42px 26px 26px">
-        <div class="sound">◂× SOUND OFF</div>
-        <div class="eb">HOW IT WORKS</div><div class="ti">From Scattered to One Screen</div>
-        <div class="st">// 05 — QA · we test everything end to end.</div>
-        <img class="mini" src="images/hp-stoptions.jpg" alt="" style="top:74px">
-        <div class="rail"><b class="on"></b><i></i><b></b><i></i><b></b><i></i><b></b><i></i><b class="on"></b><i></i><b></b></div>
-      </div>
+      <div class="valance"></div><div class="curtain l"></div><div class="curtain r"></div>
+      <div class="demo"><div class="sound">◂× SOUND OFF</div><div class="eb">HOW IT WORKS</div><div class="ti">From Scattered to One Screen</div><div class="st">// 05 — QA · we test everything end to end.</div><img class="mini" src="images/hp-stoptions.jpg" alt="" style="top:74px"><div class="rail"><b class="on"></b><i></i><b></b><i></i><b></b><i></i><b></b><i></i><b class="on"></b><i></i><b></b></div></div>
       <div class="hint">curtains part when the video plays</div>
     </div>
   </div>
 
-  <div class="pick">Pick a number and I'll build it for real on the new <b style="color:var(--gold)">Our Process</b> page.</div>
+  <div class="pick">Pick the frame + material and I'll build it for real on the new <b style="color:var(--gold)">Our Process</b> page.</div>
 </div>
 </body>
 </html>
