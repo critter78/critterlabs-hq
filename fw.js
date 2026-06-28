@@ -17,15 +17,15 @@
     var ox = r.left + r.width / 2, oy = r.top + r.height / 2;
     var L = ensureLayer();
     var reach = Math.min(window.innerWidth, window.innerHeight) * 0.72;
-    var n = 48;
+    var n = 80;
     for (var i = 0; i < n; i++) {
       (function () {
         var p = document.createElement('span');
         var c = colors[Math.floor(Math.random() * colors.length)];
-        var size = 2 + Math.random() * 3.5;
+        var size = 3 + Math.random() * 4;
         p.style.cssText = 'position:absolute;left:' + ox + 'px;top:' + oy + 'px;width:' + size +
           'px;height:' + size + 'px;border-radius:50%;background:' + c +
-          ';box-shadow:0 0 6px ' + c + ';will-change:transform,opacity';
+          ';box-shadow:0 0 ' + (8 + size) + 'px ' + c + ',0 0 4px ' + c + ';will-change:transform,opacity';
         L.appendChild(p);
         var ang = Math.random() * Math.PI * 2;
         var dist = reach * (0.3 + Math.random() * 0.7);
