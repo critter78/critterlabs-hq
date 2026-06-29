@@ -11,7 +11,7 @@
 <style>
 /* ===== retro scene ===== */
 .scene-wrap{margin:34px 0 10px}
-.scene{position:relative;min-height:712px;display:flex;align-items:flex-end;justify-content:space-around;gap:14px;
+.scene{position:relative;min-height:560px;display:flex;align-items:flex-end;justify-content:center;gap:44px;
   border:1px solid var(--border);border-radius:14px;padding:36px 28px 0;overflow:hidden;
   background:
     radial-gradient(120% 80% at 50% 8%,rgba(245,200,66,.06),transparent 55%),
@@ -21,34 +21,37 @@
   repeating-linear-gradient(90deg,rgba(245,200,66,.05) 0 1px,transparent 1px 46px);
   border-top:1px solid rgba(245,200,66,.12)}
 
-/* ----- the gold vintage TV, sitting on a wood stand ----- */
-.tvset{--c1:#f3d271;--c2:#b07e22;--bd:#d8b049;position:relative;z-index:3;width:min(500px,100%);align-self:flex-end}
+/* ----- the gold vintage TV (sits on the dresser, beside the Mac) ----- */
+.tvset{--c1:#f3d271;--c2:#b07e22;--bd:#d8b049;position:relative;z-index:3;width:388px}
 .tvset.steel{--c1:#4a5058;--c2:#2c3138;--bd:#5b626a}
-.tv{position:relative;z-index:2;background:linear-gradient(160deg,var(--c1),var(--c2));border:1px solid var(--bd);border-radius:22px;
-  padding:16px 18px 13px;box-shadow:0 22px 44px rgba(0,0,0,.5),inset 0 1px 0 rgba(255,255,255,.35)}
-.tv .cab{background:#0a0e16;border-radius:11px;padding:8px;box-shadow:inset 0 0 0 1px rgba(0,0,0,.6)}
-.tv .cab iframe{display:block;width:100%;height:330px;border:0;border-radius:6px;background:#0a0e16}
-.tv .ctrls{display:flex;align-items:center;justify-content:flex-end;gap:11px;margin-top:10px}
-.tv .knob{width:19px;height:19px;border-radius:50%;background:radial-gradient(circle at 34% 30%,#3a3324,#15110a);box-shadow:0 2px 4px rgba(0,0,0,.5),inset 0 -2px 3px rgba(0,0,0,.5)}
-.tv .grille{flex:1;max-width:96px;height:13px;border-radius:4px;background:repeating-linear-gradient(90deg,rgba(0,0,0,.32),rgba(0,0,0,.32) 3px,rgba(0,0,0,.1) 3px,rgba(0,0,0,.1) 6px)}
-/* wood media stand / bookshelf under the TV */
-.stand{position:relative;z-index:1;width:94%;margin:-3px auto 0;
-  background:linear-gradient(180deg,#6b4426,#46290f);border:1px solid #341f0e;border-radius:5px 5px 5px 5px;
-  box-shadow:0 18px 30px rgba(0,0,0,.5),inset 0 1px 0 rgba(255,255,255,.12)}
-.stand .topsurf{height:13px;background:linear-gradient(180deg,#8a5c34,#5c3a20);border-bottom:2px solid #34200f;border-radius:5px 5px 0 0}
-.stand .shelf{display:flex;align-items:flex-end;gap:10px;padding:11px 18px 13px;height:92px;box-sizing:border-box}
-.stand .books{display:flex;align-items:flex-end;gap:3px}
-.stand .bk{width:9px;border-radius:1px 1px 0 0;box-shadow:inset 1px 0 0 rgba(255,255,255,.22),0 1px 2px rgba(0,0,0,.3)}
-.stand .vinyl{width:48px;height:48px;border-radius:50%;align-self:center;background:radial-gradient(circle at 50% 50%,#cfa84f 0 9%,#111 11% 46%,#1c1c1c 48%,#0a0a0a 100%);box-shadow:0 3px 6px rgba(0,0,0,.4)}
-.stand .legs{display:flex;justify-content:space-between;padding:0 16px}
-.stand .legs span{width:18px;height:14px;background:linear-gradient(#46290f,#28170a);border-radius:0 0 4px 4px}
+.tv{position:relative;z-index:2;background:linear-gradient(160deg,var(--c1),var(--c2));border:1px solid var(--bd);border-radius:20px;
+  padding:14px 16px 11px;box-shadow:0 18px 34px rgba(0,0,0,.5),inset 0 1px 0 rgba(255,255,255,.35)}
+.tv .cab{background:#0a0e16;border-radius:10px;padding:7px;box-shadow:inset 0 0 0 1px rgba(0,0,0,.6)}
+.tv .cab iframe{display:block;width:100%;height:262px;border:0;border-radius:6px;background:#0a0e16}
+.tv .ctrls{display:flex;align-items:center;justify-content:flex-end;gap:10px;margin-top:9px}
+.tv .knob{width:18px;height:18px;border-radius:50%;background:radial-gradient(circle at 34% 30%,#3a3324,#15110a);box-shadow:0 2px 4px rgba(0,0,0,.5),inset 0 -2px 3px rgba(0,0,0,.5)}
+.tv .grille{flex:1;max-width:92px;height:12px;border-radius:4px;background:repeating-linear-gradient(90deg,rgba(0,0,0,.32),rgba(0,0,0,.32) 3px,rgba(0,0,0,.1) 3px,rgba(0,0,0,.1) 6px)}
+.tvlegs{display:flex;justify-content:space-between;width:54%;margin:0 auto;padding:0 6%}
+.tvlegs span{width:12px;height:22px;background:linear-gradient(var(--c1),var(--c2));border-radius:0 0 5px 5px}
+.tvlegs span:first-child{transform:rotate(10deg)}.tvlegs span:last-child{transform:rotate(-10deg)}
 
-/* ----- LEFT: Colour Classic Mac sitting on a big Vendo Coca-Cola machine ----- */
-.leftstack{flex:none;width:268px;align-self:flex-end;z-index:2}
-.leftstack .mac{margin:0 auto 12px}
+/* the dresser unit: TV + Mac side by side on a mid-century credenza */
+.dunit{flex:none;width:600px;display:flex;flex-direction:column;align-items:stretch}
+.ontop{display:flex;align-items:flex-end;justify-content:center;gap:16px;padding:0 10px}
+.macslot{width:166px;align-self:flex-end;display:flex;justify-content:center}
+.dresser{position:relative;margin-top:-2px}
+.dresser .dtop{height:16px;margin:0 -8px;border-radius:7px 7px 3px 3px;background:linear-gradient(180deg,#8a5c34,#5c3a20);border:1px solid #3a2413;box-shadow:0 4px 8px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.2)}
+.dresser .dbody{display:flex;gap:7px;padding:9px;background:linear-gradient(180deg,#6b4827,#46290f);border:1px solid #34200f;border-top:0;background-image:repeating-linear-gradient(90deg,rgba(0,0,0,.10) 0 1px,transparent 1px 7px)}
+.dresser .dcol{flex:1;display:flex;flex-direction:column;gap:7px}
+.dresser .drw{height:50px;border-radius:4px;display:flex;align-items:center;justify-content:center;gap:40px;background:linear-gradient(180deg,#7a542f,#5a3c22);box-shadow:inset 0 1px 0 rgba(255,255,255,.16),inset 0 0 0 1px rgba(0,0,0,.28),inset 0 -3px 6px rgba(0,0,0,.18)}
+.dresser .drw span{width:9px;height:9px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#f4d79a,#9c7322);box-shadow:0 1px 2px rgba(0,0,0,.55)}
+.dresser .dlegs{display:flex;justify-content:space-between;padding:0 28px}
+.dresser .dlegs span{width:17px;height:40px;background:linear-gradient(100deg,#5a3c20,#321f0d);clip-path:polygon(0 0,100% 0,70% 100%,30% 100%)}
+.dresser .dlegs span:first-child{transform:rotate(7deg)}.dresser .dlegs span:last-child{transform:rotate(-7deg)}
 
+/* ----- LEFT: the Vendo Coca-Cola machine, standing on its own ----- */
 /* the Vendo-style Coca-Cola bottle machine */
-.vendo{position:relative;width:268px;height:498px;margin:0 auto;border-radius:22px 22px 12px 12px;
+.vendo{position:relative;width:268px;height:498px;flex:none;align-self:flex-end;border-radius:22px 22px 12px 12px;
   background:linear-gradient(100deg,#d32a20,#ec362b 16%,#b8160f 56%,#7c0c07);
   border:1px solid #5e0b07;box-shadow:0 32px 48px rgba(0,0,0,.55),inset 0 2px 0 rgba(255,255,255,.18),inset -18px 0 36px rgba(0,0,0,.34),inset 16px 0 26px rgba(255,255,255,.07)}
 /* white domed marquee with the Coca-Cola script */
@@ -85,8 +88,8 @@
 .cbot::before{content:"";position:absolute;top:0;left:35%;width:30%;height:8%;background:#c9201a;border-radius:1px 1px 0 0}
 .cbot::after{content:"";position:absolute;top:47%;left:0;right:0;height:15%;background:rgba(255,255,255,.88);box-shadow:0 0 0 .5px rgba(180,30,20,.4)}
 
-/* the Macintosh Colour Classic */
-.mac{width:200px;position:relative;z-index:3}
+/* the Macintosh Colour Classic (10% smaller, sits on the dresser beside the TV) */
+.mac{width:200px;position:relative;z-index:3;transform:scale(.83);transform-origin:bottom center}
 .mac .body{background:linear-gradient(165deg,#ece5d4,#d2c8af);border:1px solid #bcb094;border-radius:18px 18px 13px 13px;
   padding:14px 13px 11px;box-shadow:0 16px 26px rgba(0,0,0,.42),inset 0 1px 0 rgba(255,255,255,.7),inset 0 -4px 9px rgba(0,0,0,.1)}
 .mac .screen{position:relative;height:130px;border-radius:8px;overflow:hidden;background:#0b1a2e;
@@ -116,7 +119,12 @@
 .scene-cap{text-align:center;color:var(--muted);font-size:.78rem;margin-top:14px}
 .scene-cap b{color:var(--gold)}
 
-@media(max-width:880px){.leftstack{display:none}.scene{min-height:0;padding:26px 16px 0}.tv .cab iframe{height:300px}}
+@media(max-width:1023px){
+  .vendo,.macslot{display:none}
+  .scene{min-height:0;padding:26px 16px 0;justify-content:center;gap:0}
+  .dunit{width:100%}.ontop{padding:0;gap:0}.tvset{width:100%}
+  .tv .cab iframe{height:300px}
+}
 
 /* ===== before / after ===== */
 .ba{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:28px}
@@ -165,84 +173,79 @@
   <div class="scene-wrap">
     <div class="scene">
       <div class="floor"></div>
-      <!-- LEFT: Macintosh Colour Classic sitting on a Vendo Coca-Cola machine -->
-      <div class="leftstack">
-        <div class="mac">
-          <div class="body">
-            <div class="screen">
-              <div class="mbar"><i></i><u></u></div>
-              <div class="desk">
-                <div class="win"></div>
-                <span class="ic" style="top:23px;left:15px"></span>
-                <span class="ic" style="top:23px;left:33px"></span>
-                <span class="ic" style="top:39px;left:15px"></span>
-                <span class="ic" style="top:39px;left:33px;background:#6fb7ff"></span>
-                <span class="ic" style="top:55px;left:15px;background:#6fb7ff"></span>
-              </div>
-            </div>
-            <div class="row">
-              <div class="vents"><span></span><span></span></div>
-              <div class="floppy"></div>
-            </div>
-            <div class="name">Macintosh</div>
-            <div class="foot">
-              <svg class="alogo" viewBox="0 0 100 122" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <defs><clipPath id="apm">
-                  <path d="M73.8,58.6c-0.1-9.6,7.8-14.2,8.2-14.4c-4.5-6.5-11.4-7.4-13.9-7.5c-5.9-0.6-11.5,3.5-14.5,3.5c-3,0-7.6-3.4-12.5-3.3c-6.4,0.1-12.4,3.7-15.7,9.5c-6.7,11.6-1.7,28.8,4.8,38.2c3.2,4.6,7,9.8,12,9.6c4.8-0.2,6.6-3.1,12.4-3.1c5.8,0,7.4,3.1,12.5,3c5.2-0.1,8.5-4.7,11.7-9.3c3.7-5.3,5.2-10.5,5.3-10.8C81.5,73.5,73.9,68.2,73.8,58.6z"/>
-                  <path d="M64.5,30.3c2.6-3.2,4.4-7.6,3.9-12c-3.8,0.2-8.4,2.5-11.1,5.7c-2.4,2.8-4.6,7.3-4,11.6C61.5,35.9,61.9,33.5,64.5,30.3z"/>
-                </clipPath></defs>
-                <g clip-path="url(#apm)">
-                  <rect x="8" y="13" width="84" height="15.6" fill="#5fbb46"/>
-                  <rect x="8" y="28.6" width="84" height="15.6" fill="#fdb827"/>
-                  <rect x="8" y="44.2" width="84" height="15.6" fill="#f5821f"/>
-                  <rect x="8" y="59.8" width="84" height="15.6" fill="#e0392f"/>
-                  <rect x="8" y="75.4" width="84" height="15.6" fill="#963d97"/>
-                  <rect x="8" y="91" width="84" height="17" fill="#1aa3dd"/>
-                </g>
-              </svg>
-              <span class="cc">Colour Classic</span>
-            </div>
-            <div class="grille"></div>
-          </div>
-          <div class="mac-feet"><span></span><span></span></div>
+      <!-- LEFT: the Vendo Coca-Cola machine, standing on its own -->
+      <div class="vendo">
+        <div class="head"><div class="drink">Drink</div><div class="cola">Coca-Cola</div><div class="tm">TRADE MARK REG.</div></div>
+        <div class="coinrow">
+          <div class="glass"><div class="row"><span class="cbot"></span><span class="cbot"></span><span class="cbot"></span><span class="cbot"></span><span class="cbot"></span></div></div>
+          <div class="price">10¢</div>
         </div>
-        <div class="vendo">
-          <div class="head"><div class="drink">Drink</div><div class="cola">Coca-Cola</div><div class="tm">TRADE MARK REG.</div></div>
-          <div class="coinrow">
-            <div class="glass"><div class="row"><span class="cbot"></span><span class="cbot"></span><span class="cbot"></span><span class="cbot"></span><span class="cbot"></span></div></div>
-            <div class="price">10¢</div>
-          </div>
-          <div class="door">
-            <span class="handle"></span>
-            <span class="coinret"></span>
-            <span class="opener"></span>
-            <span class="disp"></span>
-            <span class="vbadge">Vendo</span>
-          </div>
+        <div class="door">
+          <span class="handle"></span>
+          <span class="coinret"></span>
+          <span class="opener"></span>
+          <span class="disp"></span>
+          <span class="vbadge">Vendo</span>
         </div>
       </div>
-      <!-- CENTER: the gold TV on a wood stand, with the live animation -->
-      <div class="tvset">
-        <div class="tv"><div class="cab"><iframe src="process-embed.html" loading="lazy" title="How CritterLabs builds your HQ"></iframe></div><div class="ctrls"><span class="grille"></span><span class="knob"></span><span class="knob"></span></div></div>
-        <div class="stand">
-          <div class="topsurf"></div>
-          <div class="shelf">
-            <div class="books">
-              <span class="bk" style="height:60px;background:linear-gradient(#9a3b2e,#6e271d)"></span>
-              <span class="bk" style="height:68px;background:linear-gradient(#2f6b8a,#1d4760)"></span>
-              <span class="bk" style="height:54px;background:linear-gradient(#caa23e,#9a7720)"></span>
-              <span class="bk" style="height:64px;background:linear-gradient(#3f7d4e,#27512f)"></span>
-              <span class="bk" style="height:58px;background:linear-gradient(#7a5a8a,#4f3a5e)"></span>
-              <span class="bk" style="height:66px;background:linear-gradient(#b5532e,#7e371d)"></span>
-            </div>
-            <div class="vinyl"></div>
-            <div class="books">
-              <span class="bk" style="height:62px;background:linear-gradient(#356b7a,#214650)"></span>
-              <span class="bk" style="height:56px;background:linear-gradient(#a8893a,#7a6320)"></span>
-              <span class="bk" style="height:70px;background:linear-gradient(#8a3b3b,#5e2424)"></span>
+
+      <!-- RIGHT: the dresser — gold TV (on its legs) beside the Macintosh -->
+      <div class="dunit">
+        <div class="ontop">
+          <div class="tvset">
+            <div class="tv"><div class="cab"><iframe src="process-embed.html" loading="lazy" title="How CritterLabs builds your HQ"></iframe></div><div class="ctrls"><span class="grille"></span><span class="knob"></span><span class="knob"></span></div></div>
+            <div class="tvlegs"><span></span><span></span></div>
+          </div>
+          <div class="macslot">
+            <div class="mac">
+              <div class="body">
+                <div class="screen">
+                  <div class="mbar"><i></i><u></u></div>
+                  <div class="desk">
+                    <div class="win"></div>
+                    <span class="ic" style="top:23px;left:15px"></span>
+                    <span class="ic" style="top:23px;left:33px"></span>
+                    <span class="ic" style="top:39px;left:15px"></span>
+                    <span class="ic" style="top:39px;left:33px;background:#6fb7ff"></span>
+                    <span class="ic" style="top:55px;left:15px;background:#6fb7ff"></span>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="vents"><span></span><span></span></div>
+                  <div class="floppy"></div>
+                </div>
+                <div class="name">Macintosh</div>
+                <div class="foot">
+                  <svg class="alogo" viewBox="0 0 100 122" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <defs><clipPath id="apm">
+                      <path d="M73.8,58.6c-0.1-9.6,7.8-14.2,8.2-14.4c-4.5-6.5-11.4-7.4-13.9-7.5c-5.9-0.6-11.5,3.5-14.5,3.5c-3,0-7.6-3.4-12.5-3.3c-6.4,0.1-12.4,3.7-15.7,9.5c-6.7,11.6-1.7,28.8,4.8,38.2c3.2,4.6,7,9.8,12,9.6c4.8-0.2,6.6-3.1,12.4-3.1c5.8,0,7.4,3.1,12.5,3c5.2-0.1,8.5-4.7,11.7-9.3c3.7-5.3,5.2-10.5,5.3-10.8C81.5,73.5,73.9,68.2,73.8,58.6z"/>
+                      <path d="M64.5,30.3c2.6-3.2,4.4-7.6,3.9-12c-3.8,0.2-8.4,2.5-11.1,5.7c-2.4,2.8-4.6,7.3-4,11.6C61.5,35.9,61.9,33.5,64.5,30.3z"/>
+                    </clipPath></defs>
+                    <g clip-path="url(#apm)">
+                      <rect x="8" y="13" width="84" height="15.6" fill="#5fbb46"/>
+                      <rect x="8" y="28.6" width="84" height="15.6" fill="#fdb827"/>
+                      <rect x="8" y="44.2" width="84" height="15.6" fill="#f5821f"/>
+                      <rect x="8" y="59.8" width="84" height="15.6" fill="#e0392f"/>
+                      <rect x="8" y="75.4" width="84" height="15.6" fill="#963d97"/>
+                      <rect x="8" y="91" width="84" height="17" fill="#1aa3dd"/>
+                    </g>
+                  </svg>
+                  <span class="cc">Colour Classic</span>
+                </div>
+                <div class="grille"></div>
+              </div>
+              <div class="mac-feet"><span></span><span></span></div>
             </div>
           </div>
-          <div class="legs"><span></span><span></span></div>
+        </div>
+        <div class="dresser">
+          <div class="dtop"></div>
+          <div class="dbody">
+            <div class="dcol"><div class="drw"><span></span><span></span></div><div class="drw"><span></span><span></span></div></div>
+            <div class="dcol"><div class="drw"><span></span><span></span></div><div class="drw"><span></span><span></span></div></div>
+            <div class="dcol"><div class="drw"><span></span><span></span></div><div class="drw"><span></span><span></span></div></div>
+          </div>
+          <div class="dlegs"><span></span><span></span><span></span><span></span></div>
         </div>
       </div>
     </div>
