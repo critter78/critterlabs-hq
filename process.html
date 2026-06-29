@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Our Process — CritterLabs HQ</title>
+<meta name="description" content="How CritterLabs turns your scattered tools, feeds, and spreadsheets into one AI-driven HQ — discovery to launch, step by step.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Special+Elite&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="favicon.ico" sizes="any"><link rel="icon" type="image/png" href="favicon-32.png"><link rel="apple-touch-icon" href="apple-touch-icon.png">
+<style>
+/* ===== retro scene ===== */
+.scene-wrap{margin:34px 0 10px}
+.scene{position:relative;min-height:520px;display:flex;align-items:flex-end;justify-content:center;
+  border:1px solid var(--border);border-radius:14px;padding:36px 24px 0;overflow:hidden;
+  background:
+    radial-gradient(120% 80% at 50% 8%,rgba(245,200,66,.06),transparent 55%),
+    linear-gradient(180deg,#0b0f17,#0e1422)}
+.scene .floor{position:absolute;left:0;right:0;bottom:0;height:120px;
+  background:linear-gradient(180deg,transparent,rgba(0,0,0,.5)),
+  repeating-linear-gradient(90deg,rgba(245,200,66,.05) 0 1px,transparent 1px 46px);
+  border-top:1px solid rgba(245,200,66,.12)}
+
+/* ----- the gold TV (swap .gold for .steel to compare) ----- */
+.tvset{--c1:#f3d271;--c2:#b07e22;--bd:#d8b049;position:relative;z-index:3;width:min(660px,100%)}
+.tvset.steel{--c1:#4a5058;--c2:#2c3138;--bd:#5b626a}
+.tv{background:linear-gradient(160deg,var(--c1),var(--c2));border:1px solid var(--bd);border-radius:24px;
+  padding:20px 22px 16px;box-shadow:0 30px 60px rgba(0,0,0,.55),inset 0 1px 0 rgba(255,255,255,.35)}
+.tv .cab{background:#0a0e16;border-radius:12px;padding:9px;box-shadow:inset 0 0 0 1px rgba(0,0,0,.6)}
+.tv .cab iframe{display:block;width:100%;height:430px;border:0;border-radius:6px;background:#0a0e16}
+.tv .ctrls{display:flex;align-items:center;justify-content:flex-end;gap:12px;margin-top:12px}
+.tv .knob{width:22px;height:22px;border-radius:50%;background:radial-gradient(circle at 34% 30%,#3a3324,#15110a);box-shadow:0 2px 4px rgba(0,0,0,.5),inset 0 -2px 3px rgba(0,0,0,.5)}
+.tv .grille{flex:1;max-width:110px;height:14px;border-radius:4px;background:repeating-linear-gradient(90deg,rgba(0,0,0,.32),rgba(0,0,0,.32) 3px,rgba(0,0,0,.1) 3px,rgba(0,0,0,.1) 6px)}
+.tv-legs{display:flex;justify-content:space-between;width:56%;margin:0 auto;padding:0 8%}
+.tv-legs span{width:13px;height:40px;background:linear-gradient(var(--c1),var(--c2));border-radius:0 0 6px 6px}
+.tv-legs span:first-child{transform:rotate(9deg)}.tv-legs span:last-child{transform:rotate(-9deg)}
+
+/* ----- Coke machine (left) ----- */
+.coke{position:absolute;left:18px;bottom:18px;z-index:2;width:118px;height:240px;border-radius:14px 14px 7px 7px;
+  background:linear-gradient(180deg,#e22a23,#a4150f);border:2px solid #7d0f0c;
+  box-shadow:0 22px 34px rgba(0,0,0,.5),inset 0 2px 0 rgba(255,255,255,.18)}
+.coke::before{content:"";position:absolute;top:30px;left:0;right:0;height:22px;background:#fff;transform:skewY(-7deg);opacity:.92;box-shadow:0 -4px 0 #fff}
+.coke .win{position:absolute;top:74px;left:12px;right:12px;height:96px;border-radius:6px;background:linear-gradient(160deg,#0c1320,#060a12);border:2px solid #6f0c09;box-shadow:inset 0 0 16px rgba(0,0,0,.7)}
+.coke .win i{position:absolute;bottom:8px;left:8px;width:13px;height:30px;border-radius:2px;background:linear-gradient(#e8413a,#7d0f0c);box-shadow:0 0 0 1px rgba(0,0,0,.4)}
+.coke .win i:nth-child(2){left:26px}.coke .win i:nth-child(3){left:44px;background:linear-gradient(#f5b53f,#a6760f)}.coke .win i:nth-child(4){left:62px}.coke .win i:nth-child(5){left:80px}
+.coke .pad{position:absolute;top:78px;right:-2px;width:0}
+.coke .slot{position:absolute;bottom:14px;left:18px;right:18px;height:16px;border-radius:3px;background:#1a0605;box-shadow:inset 0 2px 5px rgba(0,0,0,.8)}
+.coke .cap{position:absolute;top:8px;left:0;right:0;text-align:center;font-family:var(--display);color:#fff;font-size:1.1rem;letter-spacing:.5px;text-shadow:0 1px 2px rgba(0,0,0,.4)}
+
+/* ----- retro computer + Track & Field (right) ----- */
+.retro{position:absolute;right:16px;bottom:18px;z-index:2;width:166px}
+.retro .mon{background:linear-gradient(#e9e2cf,#cdc4a9);border-radius:10px 10px 4px 4px;padding:12px 12px 16px;border:1px solid #b3a988;box-shadow:0 22px 34px rgba(0,0,0,.5),inset 0 1px 0 rgba(255,255,255,.6)}
+.retro .scr{position:relative;height:104px;border-radius:4px;overflow:hidden;background:#04140a;border:2px solid #2a2415;box-shadow:inset 0 0 14px rgba(0,0,0,.8)}
+.retro .scr .sky{position:absolute;inset:0;background:linear-gradient(#071f12,#020a06)}
+.retro .scr .track{position:absolute;left:0;right:0;bottom:14px;height:18px;background:repeating-linear-gradient(90deg,#0f5a2e 0 10px,#0c4a26 10px 20px)}
+.retro .scr .lane{position:absolute;left:0;right:0;bottom:30px;height:2px;background:#1c9a52;opacity:.5}
+.retro .scr .run{position:absolute;bottom:30px;left:24px;width:8px;height:14px;background:#f5b53f;border-radius:2px;box-shadow:10px 0 0 -1px #3ddc84,22px 0 0 -2px #3b74ff}
+.retro .scr .hurdle{position:absolute;bottom:30px;right:22px;width:3px;height:13px;background:#eafff4;box-shadow:0 -11px 0 -1px #eafff4,-7px 0 0 0 #eafff4}
+.retro .scr .hi{position:absolute;top:6px;left:7px;font-family:var(--mono);font-size:7px;letter-spacing:1px;color:#3ddc84}
+.retro .scr .ti{position:absolute;top:6px;right:7px;font-family:var(--mono);font-size:7px;letter-spacing:1px;color:#f5b53f}
+.retro .scr .crt{position:absolute;inset:0;background:repeating-linear-gradient(0deg,rgba(0,0,0,.18) 0 1px,transparent 1px 3px);pointer-events:none}
+.retro .vent{margin-top:8px;height:5px;border-radius:3px;background:repeating-linear-gradient(90deg,#b3a988 0 2px,#d7cdb1 2px 6px)}
+.retro .base{height:12px;margin:6px 10px 0;border-radius:0 0 6px 6px;background:linear-gradient(#d7cdb1,#b0a583);border:1px solid #b3a988;border-top:0}
+.retro .cap{text-align:center;font-family:var(--mono);font-size:.5rem;letter-spacing:.12em;color:var(--muted);margin-top:7px}
+
+.scene-cap{text-align:center;color:var(--muted);font-size:.78rem;margin-top:14px}
+.scene-cap b{color:var(--gold)}
+
+@media(max-width:880px){.coke,.retro{display:none}.scene{min-height:0;padding:26px 16px 0}.tv .cab iframe{height:300px}}
+
+/* ===== before / after ===== */
+.ba{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:28px}
+.ba .col{border:1px solid var(--border);border-radius:var(--radius);padding:22px;background:var(--surface)}
+.ba .col.after{border-color:rgba(61,220,132,.35)}
+.ba .col h4{font-family:var(--stencil);font-size:.7rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:12px}
+.ba .col.before h4{color:#f87171}.ba .col.after h4{color:var(--green)}
+.ba .col ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:9px}
+.ba .col li{color:var(--text-dim);font-size:.88rem;padding-left:20px;position:relative}
+.ba .col.before li::before{content:"✕";position:absolute;left:0;color:#f87171}
+.ba .col.after li::before{content:"✓";position:absolute;left:0;color:var(--green)}
+@media(max-width:620px){.ba{grid-template-columns:1fr}}
+
+/* ===== process steps ===== */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin-top:30px}
+.steps .s{background:var(--surface);padding:24px}
+.steps .s .n{font-family:var(--display);color:var(--gold);font-size:2rem;line-height:1}
+.steps .s h4{font-size:1rem;margin:6px 0 7px}
+.steps .s p{color:var(--muted);font-size:.86rem;line-height:1.5}
+@media(max-width:820px){.steps{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.steps{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap navin">
+  <a class="logo" href="index.html"><span class="lmark-wrap"><svg class="lmark" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs><filter id="hqg" x="-80%" y="-80%" width="260%" height="260%"><feGaussianBlur stdDeviation="1.7"/></filter></defs><rect x="2" y="2" width="28" height="28" rx="7" fill="#0E1320" stroke="#F5C842" stroke-width="1.6"/><circle cx="16" cy="16" r="7" stroke="#3B8BFF" stroke-width="1.6"/><line x1="16" y1="5.5" x2="16" y2="9" stroke="#F5C842" stroke-width="1.6" stroke-linecap="round"/><line x1="16" y1="23" x2="16" y2="26.5" stroke="#F5C842" stroke-width="1.6" stroke-linecap="round"/><line x1="5.5" y1="16" x2="9" y2="16" stroke="#F5C842" stroke-width="1.6" stroke-linecap="round"/><line x1="23" y1="16" x2="26.5" y2="16" stroke="#F5C842" stroke-width="1.6" stroke-linecap="round"/><circle class="glow" cx="16" cy="16" r="4.2" fill="#3B8BFF" filter="url(#hqg)"/><circle cx="16" cy="16" r="2.4" fill="#3B8BFF"/></svg><span class="fw"><i style="--tx:16px;--ty:0px;color:#F5C842;animation-delay:0s"></i><i style="--tx:13px;--ty:-9px;color:#3B8BFF;animation-delay:.03s"></i><i style="--tx:5px;--ty:-15px;color:#4ADE80;animation-delay:.06s"></i><i style="--tx:-5px;--ty:-15px;color:#ffffff;animation-delay:.02s"></i><i style="--tx:-13px;--ty:-9px;color:#F5C842;animation-delay:.05s"></i><i style="--tx:-16px;--ty:0px;color:#3B8BFF;animation-delay:.08s"></i><i style="--tx:-13px;--ty:9px;color:#4ADE80;animation-delay:.04s"></i><i style="--tx:-5px;--ty:15px;color:#ffffff;animation-delay:.07s"></i><i style="--tx:5px;--ty:15px;color:#F5C842;animation-delay:.01s"></i><i style="--tx:13px;--ty:9px;color:#3B8BFF;animation-delay:.05s"></i></span></span><span class="lw">CritterLabs <b>HQ</b></span></a>
+  <div class="navlinks">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="offer.html">Services</a>
+    <a href="process.html" class="active">Process</a>
+    <a href="work.html">Work</a><a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact</a>
+    <a href="contact.html" class="btn btn-blue">BOOK A CALL</a>
+  </div>
+</div></nav>
+
+<header class="wrap phead">
+  <div class="kicker">Our Process</div>
+  <h1 class="display">From Scattered to One Screen — <span class="gold">Here's How</span>.</h1>
+  <p class="sub">Discovery to launch in weeks, not quarters. Watch the build come together, then see exactly what happens at each step — and what we need from you.</p>
+</header>
+
+<section><div class="wrap">
+  <div class="scene-wrap">
+    <div class="scene">
+      <div class="floor"></div>
+      <!-- Coke machine -->
+      <div class="coke"><div class="cap">COLD</div><div class="win"><i></i><i></i><i></i><i></i><i></i></div><div class="slot"></div></div>
+      <!-- the gold TV with the live animation -->
+      <div class="tvset">
+        <div class="tv"><div class="cab"><iframe src="process-embed.html" loading="lazy" title="How CritterLabs builds your HQ"></iframe></div><div class="ctrls"><span class="grille"></span><span class="knob"></span><span class="knob"></span></div></div>
+        <div class="tv-legs"><span></span><span></span></div>
+      </div>
+      <!-- retro computer + Track & Field -->
+      <div class="retro">
+        <div class="mon"><div class="scr"><div class="sky"></div><div class="lane"></div><div class="track"></div><div class="run"></div><div class="hurdle"></div><div class="hi">HI 9999</div><div class="ti">TRACK</div><div class="crt"></div></div><div class="vent"></div></div>
+        <div class="base"></div>
+        <div class="cap">RUN &amp; SHIP</div>
+      </div>
+    </div>
+    <div class="scene-cap">The HQ build, on screen — set in a little CritterLabs lounge. <b>Hit play</b> in the TV to watch discovery → launch.</div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="eyebrow">By the numbers</div>
+  <h2 class="display">Built. Live. Measured.</h2>
+  <div class="grid grid-4" style="margin-top:24px">
+    <div class="feat"><span class="ic">// LIVE</span><h4 style="font-family:var(--display);font-size:2.2rem;color:var(--gold)">5</h4><p>Production systems shipped across very different domains.</p></div>
+    <div class="feat"><span class="ic">// REACH</span><h4 style="font-family:var(--display);font-size:2.2rem;color:var(--gold)">4</h4><p>Domains: trading, sports, SEO ops, and family logistics.</p></div>
+    <div class="feat"><span class="ic">// SPEED</span><h4 style="font-family:var(--display);font-size:2.2rem;color:var(--gold)">1–12 wks</h4><p>Typical build window, Entry through All-Star.</p></div>
+    <div class="feat"><span class="ic">// UPTIME</span><h4 style="font-family:var(--display);font-size:2.2rem;color:var(--gold)">90%+</h4><p>Target uptime, monitored with automatic fixes.</p></div>
+  </div>
+  <p class="note" style="margin-top:14px">Numbers reflect work to date — happy to confirm any of these with you before they go public.</p>
+</div></section>
+
+<section><div class="wrap">
+  <div class="eyebrow">The six steps</div>
+  <h2 class="display">How the build runs.</h2>
+  <div class="steps">
+    <div class="s"><div class="n">01</div><h4>Discovery</h4><p>A focused $250 call. We map every data source, what you need to see daily, and where the decisions live — then confirm what's feasible.</p></div>
+    <div class="s"><div class="n">02</div><h4>Mockup</h4><p>We design the layout around how you work and iterate fast — v1, v2, v3 — until the view feels right before a line of plumbing is built.</p></div>
+    <div class="s"><div class="n">03</div><h4>Wire the Data</h4><p>We connect your feeds (API, OAuth, or scheduled imports) and normalize the mess into one source of truth.</p></div>
+    <div class="s"><div class="n">04</div><h4>HQ Build</h4><p>Your custom dashboard + daily AI brief, scored and surfaced — built on the proven aggregate → normalize → score → surface pipeline.</p></div>
+    <div class="s"><div class="n">05</div><h4>QA</h4><p>We test everything end to end — data, alerts, and layout — until it's rock solid and syncing live.</p></div>
+    <div class="s"><div class="n">06</div><h4>Launch &amp; Iterate</h4><p>We host, monitor, and keep it sharp. Upstream APIs break; we fix them — and the LSTM layer keeps getting smarter on your data.</p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="eyebrow">Why it matters</div>
+  <h2 class="display">Before &amp; after.</h2>
+  <div class="ba">
+    <div class="col before"><h4>Before</h4><ul>
+      <li>A broker tab, three charts, two spreadsheets, a dead journal.</li>
+      <li>Two laptops and a phone to see one picture.</li>
+      <li>You're the integration layer — manually, every day.</li>
+      <li>The number that mattered? You found it ten minutes too late.</li>
+    </ul></div>
+    <div class="col after"><h4>After</h4><ul>
+      <li>One screen. Positions, P&amp;L, risk, signals — aggregated.</li>
+      <li>A daily AI brief: what changed, what to watch, where the risk is.</li>
+      <li>Alerts fire when your thresholds trigger — no babysitting.</li>
+      <li>Hosted, monitored, and getting smarter over time.</li>
+    </ul></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="eyebrow">Proof</div>
+  <h2 class="display">The same process, five times over.</h2>
+  <p class="lead">Every system below ran through these exact steps — different domains, one playbook.</p>
+  <div class="grid grid-3" style="margin-top:24px">
+    <a class="feat" style="text-decoration:none" href="work-stoptions.html"><span class="ic">// TRADING</span><h4>Members.Stoptions.ai</h4><p>Live options scanner + LSTM scoring + daily AI brief.</p></a>
+    <a class="feat" style="text-decoration:none" href="work-breakpoint.html"><span class="ic">// SPORTS</span><h4>BreakPointBetting.net</h4><p>Tennis edge-signal engine + Polymarket auto-trader.</p></a>
+    <a class="feat" style="text-decoration:none" href="work-critterlabs.html"><span class="ic">// SEO OPS</span><h4>MGMT.CritterLabs.io</h4><p>An AI marketing team in one cockpit.</p></a>
+  </div>
+  <div class="cta-row" style="margin-top:22px"><a class="btn btn-ghost" href="work.html">See all work →</a></div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="eyebrow">Process FAQ</div>
+  <h2 class="display">What to expect.</h2>
+  <div class="faq">
+    <details open><summary>How long does it take?</summary><div class="a">Typically 1–2 weeks for Entry, 2–4 for Pro, and 4–12 for All-Star — depending on how many data sources are involved and how clean they are. We confirm a timeline in your proposal before any work starts.</div></details>
+    <details><summary>What do you need from me?</summary><div class="a">A discovery call to map your sources, access (or exports) for those sources, and a round of feedback during the mockup and review phases. We handle the rest.</div></details>
+    <details><summary>What if my data has no API?</summary><div class="a">Often we can still work from CSV or statement exports on a schedule. If a source is fully locked, we'll tell you straight and scope it as manual entry or recommend an alternative — all confirmed on the discovery call.</div></details>
+    <details><summary>What happens after launch?</summary><div class="a">We host, monitor, and maintain it — fixing upstream API changes automatically and iterating on the cadence your tier includes. The monthly fee is what keeps your HQ live and accurate.</div></details>
+  </div>
+</div></section>
+
+<div class="wrap"><div class="final">
+  <h2 class="display">Ready to run the playbook on your world?</h2>
+  <p>Book the $250 discovery call. We'll map your data, recommend a package, and credit the fee toward your build.</p>
+  <a class="btn btn-blue" href="contact.html">Book My Discovery Call</a>
+</div></div>
+
+<footer><div class="wrap foot">
+  <div>© 2026 CritterLabs — AI &amp; Algorithmic Engineering Studio</div>
+  <div class="links"><a href="index.html">Home</a><a href="about.html">About</a><a href="offer.html">Services</a><a href="work.html">Work</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a></div>
+</div></footer>
+
+<script src="fw.js" defer></script>
+</body></html>
