@@ -52,3 +52,25 @@
   setTimeout(burst, 1300);
   setInterval(burst, 300000);
 })();
+
+/* Pause the embedded process animation while it's scrolled out of view (saves CPU) */
+(function () {
+  var ifr = document.querySelector('iframe[src*="process-embed"]');
+  if (!ifr || !('IntersectionObserver' in window)) return;
+  var weAutoPaused = false;
+  function ppBtn() { try { return ifr.contentDocument.querySelectorAll('button')[1]; } catch (e) { return null; } }
+  function isPlaying(b) { return !!b && /<rect/i.test(b.innerHTML); }   // pause icon shown => playing
+  function isPaused(b)  { return !!b && /<path/i.test(b.innerHTML); }   // play icon shown  => paused
+  function setVisible(vis) {
+    var b = ppBtn(); if (!b) return;
+    if (!vis) { if (isPlaying(b)) { b.click(); weAutoPaused = true; } }
+    else if (weAutoPaused && isPaused(b)) { b.click(); weAutoPaused = false; }
+  }
+  function onScreen() {
+    var r = ifr.getBoundingClientRect(), vh = window.innerHeight || document.documentElement.clientHeight;
+    return r.bottom > 0 && r.top < vh;
+  }
+  new IntersectionObserver(function (es) { setVisible(es[0].isIntersecting); }, { threshold: 0 }).observe(ifr);
+  // catch the case where it lazy-loads while already off-screen
+  ifr.addEventListener('load', function () { setTimeout(function () { setVisible(onScreen()); }, 400); });
+})();
