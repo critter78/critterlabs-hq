@@ -22,7 +22,7 @@
   border-top:1px solid rgba(245,200,66,.12)}
 
 /* ----- the gold vintage TV (sits on the dresser, beside the Mac) ----- */
-.tvset{--c1:#f3d271;--c2:#b07e22;--bd:#d8b049;position:relative;z-index:3;width:508px}
+.tvset{--c1:#f3d271;--c2:#b07e22;--bd:#d8b049;position:relative;z-index:3;width:628px}
 .tvset.steel{--c1:#4a5058;--c2:#2c3138;--bd:#5b626a}
 .tv{position:relative;z-index:2;background:linear-gradient(160deg,var(--c1),var(--c2));border:1px solid var(--bd);border-radius:18px;
   padding:7px 8px 7px;box-shadow:0 18px 34px rgba(0,0,0,.5),inset 0 1px 0 rgba(255,255,255,.35)}
@@ -36,22 +36,22 @@
 .tvlegs span:first-child{transform:rotate(10deg)}.tvlegs span:last-child{transform:rotate(-10deg)}
 
 /* the dresser unit: TV + Mac side by side on a mid-century credenza */
-.dunit{flex:none;width:650px;display:flex;flex-direction:column;align-items:stretch}
-.ontop{display:flex;align-items:flex-end;justify-content:center;gap:8px;padding:0 6px}
-.macslot{width:118px;align-self:flex-end;display:flex;justify-content:center}
+.dunit{flex:none;width:640px;display:flex;flex-direction:column;align-items:stretch}
+.ontop{display:flex;align-items:flex-end;justify-content:center;padding:0 6px}
 .dresser{position:relative;margin-top:-2px}
 .dresser .dtop{height:14px;margin:0 -7px;border-radius:6px 6px 2px 2px;background:linear-gradient(180deg,#6f4a28,#4a2f18);border:1px solid #2e1c0d;box-shadow:0 5px 10px rgba(0,0,0,.5),inset 0 1px 0 rgba(255,255,255,.22)}
-.dresser .dcab{position:relative;display:flex;gap:8px;padding:11px 12px;background:linear-gradient(180deg,#5a3d22,#3c2712);border:1px solid #2c1b0c;border-top:0;background-image:repeating-linear-gradient(90deg,rgba(0,0,0,.08) 0 1px,transparent 1px 9px)}
+.dresser .dcab{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:11px 12px;background:linear-gradient(180deg,#5a3d22,#3c2712);border:1px solid #2c1b0c;border-top:0;background-image:repeating-linear-gradient(90deg,rgba(0,0,0,.08) 0 1px,transparent 1px 9px)}
 .dresser .dcab::after{content:"";position:absolute;left:12px;right:12px;top:5px;height:1px;background:linear-gradient(90deg,transparent,rgba(214,172,92,.55),transparent)}
-.dresser .case{flex:1;position:relative;height:120px;border-radius:4px;overflow:hidden;background:linear-gradient(180deg,rgba(190,214,236,.13),rgba(150,176,205,.05));border:1px solid rgba(255,255,255,.15);box-shadow:inset 0 0 18px rgba(120,160,200,.12),inset 0 1px 0 rgba(255,255,255,.3)}
+.dresser .case{position:relative;height:104px;border-radius:4px;overflow:hidden;background:linear-gradient(180deg,rgba(190,214,236,.13),rgba(150,176,205,.05));border:1px solid rgba(255,255,255,.15);box-shadow:inset 0 0 18px rgba(120,160,200,.12),inset 0 1px 0 rgba(255,255,255,.3)}
+.dresser .shadow{position:absolute;left:50%;bottom:25px;transform:translateX(-50%);width:60%;height:8px;border-radius:50%;z-index:1;background:radial-gradient(ellipse at center,rgba(0,0,0,.5),rgba(0,0,0,0) 72%);filter:blur(2px)}
 .dresser .case::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;z-index:4;background:linear-gradient(90deg,rgba(140,210,255,.18),rgba(195,236,255,.85),rgba(140,210,255,.18))}
 .dresser .glint{position:absolute;top:-10%;left:-30%;width:55%;height:140%;z-index:3;background:linear-gradient(105deg,transparent,rgba(255,255,255,.1),transparent);transform:rotate(8deg);pointer-events:none}
 .dresser .floorline{position:absolute;left:8px;right:8px;bottom:23px;height:1px;background:rgba(255,255,255,.2);z-index:1}
-.dresser .pwrap{position:absolute;left:6px;right:6px;top:6px;bottom:24px;display:flex;align-items:flex-end;justify-content:center;z-index:2}
-.dresser .pair{position:relative;height:88px;display:flex;align-items:flex-end;justify-content:center}
+.dresser .pwrap{position:absolute;left:6px;right:6px;top:5px;bottom:24px;display:flex;align-items:flex-end;justify-content:center;z-index:2}
+.dresser .pair{position:relative;height:72px;display:flex;align-items:flex-end;justify-content:center}
 .dresser .sh{display:block;width:auto}
-.dresser .sh.front{position:relative;height:84px;z-index:2;filter:drop-shadow(0 6px 5px rgba(0,0,0,.4))}
-.dresser .sh.back{position:absolute;bottom:0;height:75px;transform:translateX(-24px);z-index:1;filter:brightness(.72) drop-shadow(0 5px 4px rgba(0,0,0,.45))}
+.dresser .sh.front{position:relative;height:68px;z-index:2;filter:drop-shadow(0 5px 4px rgba(0,0,0,.4))}
+.dresser .sh.back{position:absolute;bottom:0;height:59px;transform:translateX(-21px);z-index:1;filter:brightness(.72) drop-shadow(0 4px 4px rgba(0,0,0,.45))}
 .dresser .plate{position:absolute;left:0;right:0;bottom:0;height:23px;z-index:5;background:linear-gradient(180deg,#15110b,#0a0805);border-top:1px solid rgba(214,172,92,.3);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px}
 .dresser .plate b{font-family:var(--mono);font-size:8px;letter-spacing:.12em;color:#f0d79a;line-height:1}
 .dresser .plate i{font-family:var(--mono);font-size:7px;letter-spacing:.03em;color:#9b968d;font-style:normal;line-height:1}
@@ -205,47 +205,6 @@
             <div class="tv"><div class="cab"><iframe src="process-embed.html" loading="lazy" title="How CritterLabs builds your HQ"></iframe></div><div class="ctrls"><span class="grille"></span><span class="knob"></span><span class="knob"></span></div></div>
             <div class="tvlegs"><span></span><span></span></div>
           </div>
-          <div class="macslot">
-            <div class="mac">
-              <div class="body">
-                <div class="screen">
-                  <div class="mbar"><i></i><u></u></div>
-                  <div class="desk">
-                    <div class="win"></div>
-                    <span class="ic" style="top:23px;left:15px"></span>
-                    <span class="ic" style="top:23px;left:33px"></span>
-                    <span class="ic" style="top:39px;left:15px"></span>
-                    <span class="ic" style="top:39px;left:33px;background:#6fb7ff"></span>
-                    <span class="ic" style="top:55px;left:15px;background:#6fb7ff"></span>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="vents"><span></span><span></span></div>
-                  <div class="floppy"></div>
-                </div>
-                <div class="name">Macintosh</div>
-                <div class="foot">
-                  <svg class="alogo" viewBox="0 0 100 122" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                    <defs><clipPath id="apm">
-                      <path d="M73.8,58.6c-0.1-9.6,7.8-14.2,8.2-14.4c-4.5-6.5-11.4-7.4-13.9-7.5c-5.9-0.6-11.5,3.5-14.5,3.5c-3,0-7.6-3.4-12.5-3.3c-6.4,0.1-12.4,3.7-15.7,9.5c-6.7,11.6-1.7,28.8,4.8,38.2c3.2,4.6,7,9.8,12,9.6c4.8-0.2,6.6-3.1,12.4-3.1c5.8,0,7.4,3.1,12.5,3c5.2-0.1,8.5-4.7,11.7-9.3c3.7-5.3,5.2-10.5,5.3-10.8C81.5,73.5,73.9,68.2,73.8,58.6z"/>
-                      <path d="M64.5,30.3c2.6-3.2,4.4-7.6,3.9-12c-3.8,0.2-8.4,2.5-11.1,5.7c-2.4,2.8-4.6,7.3-4,11.6C61.5,35.9,61.9,33.5,64.5,30.3z"/>
-                    </clipPath></defs>
-                    <g clip-path="url(#apm)">
-                      <rect x="8" y="13" width="84" height="15.6" fill="#5fbb46"/>
-                      <rect x="8" y="28.6" width="84" height="15.6" fill="#fdb827"/>
-                      <rect x="8" y="44.2" width="84" height="15.6" fill="#f5821f"/>
-                      <rect x="8" y="59.8" width="84" height="15.6" fill="#e0392f"/>
-                      <rect x="8" y="75.4" width="84" height="15.6" fill="#963d97"/>
-                      <rect x="8" y="91" width="84" height="17" fill="#1aa3dd"/>
-                    </g>
-                  </svg>
-                  <span class="cc">Colour Classic</span>
-                </div>
-                <div class="grille"></div>
-              </div>
-              <div class="mac-feet"><span></span><span></span></div>
-            </div>
-          </div>
         </div>
         <div class="dresser">
           <div class="dtop"></div>
@@ -338,25 +297,32 @@
 
 <script src="fw.js" defer></script>
 <script>
-/* sneaker cases — pick 3 of the collection at random on each visit */
+/* sneaker cases — 9 drawn at random from the collection on each visit */
 (function () {
   var S = [
-    { img: 'chicago',  n: 'AIR JORDAN 1',     s: 'Chicago Red Satin',       pair: true  },
-    { img: 'kaws',     n: 'AIR JORDAN 4',     s: 'KAWS · Grey',        pair: false },
-    { img: 'fragment', n: 'AIR JORDAN 1',     s: 'Fragment × Travis',  pair: true  },
-    { img: 'concord',  n: 'AIR JORDAN 11',    s: 'Concord',                 pair: true  },
-    { img: 'mocha',    n: 'AIR JORDAN 1',     s: 'Travis Scott Mocha',      pair: true  },
-    { img: 'sbdunk',   n: 'NIKE SB DUNK',     s: 'Travis Scott',            pair: true  },
-    { img: 'cactus',   n: 'AIR JORDAN 4',     s: 'Cactus Jack',             pair: true  },
-    { img: 'low',      n: 'AIR JORDAN 1 LOW', s: 'Travis Scott',            pair: true  }
+    { img: 'chicago',    n: 'AIR JORDAN 1',     s: 'Chicago Red Satin',  pair: true },
+    { img: 'fragment',   n: 'AIR JORDAN 1',     s: 'Fragment × Travis',  pair: true },
+    { img: 'concord',    n: 'AIR JORDAN 11',    s: 'Concord',            pair: true },
+    { img: 'mocha',      n: 'AIR JORDAN 1',     s: 'Travis Scott Mocha', pair: true },
+    { img: 'sbdunk',     n: 'NIKE SB DUNK',     s: 'Travis Scott',       pair: true },
+    { img: 'cactus',     n: 'AIR JORDAN 4',     s: 'Cactus Jack',        pair: true },
+    { img: 'low',        n: 'AIR JORDAN 1 LOW', s: 'Travis Scott',       pair: true },
+    { img: 'banned',     n: 'AIR JORDAN 1',     s: 'Banned',             pair: true },
+    { img: 'blackcat',   n: 'AIR JORDAN 3',     s: 'Black Cat',          pair: true },
+    { img: 'levis',      n: 'AIR JORDAN 4',     s: "Levi's",             pair: true },
+    { img: 'chunkydunk', n: 'NIKE SB DUNK',     s: 'Chunky Dunky',       pair: true },
+    { img: 'kaws-grey',  n: 'AIR JORDAN 4',     s: 'KAWS Grey',          pair: true },
+    { img: 'kaws-black', n: 'AIR JORDAN 4',     s: 'KAWS Black',         pair: true }
   ];
   var box = document.getElementById('sneakerCases');
   if (!box) return;
   for (var i = S.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var t = S[i]; S[i] = S[j]; S[j] = t; }
-  box.innerHTML = S.slice(0, 3).map(function (d) {
+  // 9 cases drawn at random from the 13-pair collection each visit
+  var pick = S.slice(0, 9);
+  box.innerHTML = pick.map(function (d) {
     var src = 'images/shoes/' + d.img + '.png';
     var back = d.pair ? '<img class="sh back" src="' + src + '" alt="" aria-hidden="true">' : '';
-    return '<div class="case"><div class="glint"></div><div class="floorline"></div>' +
+    return '<div class="case"><div class="glint"></div><div class="floorline"></div><div class="shadow"></div>' +
       '<div class="pwrap"><div class="pair">' + back +
       '<img class="sh front" src="' + src + '" alt="' + d.n + ' ' + d.s + '"></div></div>' +
       '<div class="plate"><b>' + d.n + '</b><i>' + d.s + '</i></div></div>';
