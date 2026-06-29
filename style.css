@@ -281,9 +281,9 @@ footer{padding:40px 0;border-top:1px solid var(--border)}
 @media(max-width:560px){.glb-nav{width:40px;height:40px;font-size:1.5rem}}
 
 /* process animation embed — bolted / riveted metal frame */
-.proc{position:relative;margin-top:30px;max-width:920px;background:linear-gradient(145deg,#232a33,#10141a);border:1px solid #2d3640;border-radius:12px;padding:34px;box-shadow:inset 0 1px 0 rgba(255,255,255,.06),0 22px 46px rgba(0,0,0,.55)}
-.proc iframe{width:100%;height:600px;border:0;display:block;background:#0a0e16;border-radius:4px;box-shadow:0 0 0 1px #000}
-.proc .rv{position:absolute;width:18px;height:18px;border-radius:50%;background:radial-gradient(circle at 36% 30%,#b3bbc4,#5d656e 55%,#2b3138 80%,#171b20);box-shadow:0 2px 3px rgba(0,0,0,.6),inset 0 -1px 2px rgba(0,0,0,.55),inset 0 1px 1px rgba(255,255,255,.4);z-index:3}
-.proc .rv::after{content:"";position:absolute;inset:5px;border-radius:50%;background:linear-gradient(45deg,transparent 44%,#262c33 44%,#262c33 56%,transparent 56%),linear-gradient(-45deg,transparent 44%,#262c33 44%,#262c33 56%,transparent 56%)}
-.proc .rv.tl{top:9px;left:9px}.proc .rv.tr{top:9px;right:9px}.proc .rv.bl{bottom:9px;left:9px}.proc .rv.br{bottom:9px;right:9px}
-@media(max-width:760px){.proc{padding:22px}.proc iframe{height:460px}.proc .rv{width:14px;height:14px}}
+.proc{position:relative;margin:30px auto 0;max-width:none;background:linear-gradient(145deg,#232a33,#10141a);border:1px solid #2d3640;border-radius:12px;padding:18px;box-shadow:inset 0 1px 0 rgba(255,255,255,.06),0 22px 46px rgba(0,0,0,.55)}
+.proc iframe{width:100%;aspect-ratio:71/50;border:0;display:block;background:#0a0e16;border-radius:4px;box-shadow:0 0 0 1px #000}
+.proc .rv{position:absolute;width:15px;height:15px;border-radius:50%;background:radial-gradient(circle at 36% 30%,#b3bbc4,#5d656e 55%,#2b3138 80%,#171b20);box-shadow:0 2px 3px rgba(0,0,0,.6),inset 0 -1px 2px rgba(0,0,0,.55),inset 0 1px 1px rgba(255,255,255,.4);z-index:3}
+.proc .rv::after{content:"";position:absolute;inset:4px;border-radius:50%;background:linear-gradient(45deg,transparent 44%,#262c33 44%,#262c33 56%,transparent 56%),linear-gradient(-45deg,transparent 44%,#262c33 44%,#262c33 56%,transparent 56%)}
+.proc .rv.tl{top:3px;left:3px}.proc .rv.tr{top:3px;right:3px}.proc .rv.bl{bottom:3px;left:3px}.proc .rv.br{bottom:3px;right:3px}
+@media(max-width:760px){.proc{padding:13px}.proc .rv{width:12px;height:12px}}
