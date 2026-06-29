@@ -21,20 +21,18 @@
   repeating-linear-gradient(90deg,rgba(245,200,66,.05) 0 1px,transparent 1px 46px);
   border-top:1px solid rgba(245,200,66,.12)}
 
-/* ----- the gold vintage TV (sits on the dresser, beside the Mac) ----- */
-.tvset{--c1:#f3d271;--c2:#b07e22;--bd:#d8b049;position:relative;z-index:3;width:628px}
+/* ----- the gold TV, mounted full-width on the wall ----- */
+.walltv{margin:34px auto 0}
+.tvset{--c1:#f3d271;--c2:#b07e22;--bd:#d8b049;position:relative;z-index:3;width:100%}
 .tvset.steel{--c1:#4a5058;--c2:#2c3138;--bd:#5b626a}
-.tv{position:relative;z-index:2;background:linear-gradient(160deg,var(--c1),var(--c2));border:1px solid var(--bd);border-radius:18px;
-  padding:7px 8px 7px;box-shadow:0 18px 34px rgba(0,0,0,.5),inset 0 1px 0 rgba(255,255,255,.35)}
-.tv .cab{background:#0a0e16;border-radius:8px;padding:3px;box-shadow:inset 0 0 0 1px rgba(0,0,0,.6)}
-.tv .cab .vid{position:relative;width:100%;padding-top:calc(56.25% + 46px);border-radius:6px;overflow:hidden}
-.tv .cab .vid iframe{position:absolute;inset:0;width:100%;height:100%;display:block;border:0;background:#0a0e16}
-.tv .ctrls{display:flex;align-items:center;justify-content:flex-end;gap:10px;margin-top:9px}
-.tv .knob{width:18px;height:18px;border-radius:50%;background:radial-gradient(circle at 34% 30%,#3a3324,#15110a);box-shadow:0 2px 4px rgba(0,0,0,.5),inset 0 -2px 3px rgba(0,0,0,.5)}
-.tv .grille{flex:1;max-width:92px;height:12px;border-radius:4px;background:repeating-linear-gradient(90deg,rgba(0,0,0,.32),rgba(0,0,0,.32) 3px,rgba(0,0,0,.1) 3px,rgba(0,0,0,.1) 6px)}
-.tvlegs{display:flex;justify-content:space-between;width:54%;margin:0 auto;padding:0 6%}
-.tvlegs span{width:12px;height:22px;background:linear-gradient(var(--c1),var(--c2));border-radius:0 0 5px 5px}
-.tvlegs span:first-child{transform:rotate(10deg)}.tvlegs span:last-child{transform:rotate(-10deg)}
+.tv{position:relative;z-index:2;background:linear-gradient(160deg,var(--c1),var(--c2));border:1px solid var(--bd);border-radius:26px;
+  padding:16px 20px 13px;box-shadow:0 34px 70px rgba(0,0,0,.6),0 6px 16px rgba(0,0,0,.4),inset 0 2px 0 rgba(255,255,255,.4),inset 0 -2px 4px rgba(0,0,0,.25)}
+.tv .cab{background:#0a0e16;border-radius:12px;padding:7px;box-shadow:inset 0 0 0 1px rgba(0,0,0,.6)}
+.tv .cab .vid{position:relative;width:100%;padding-top:calc(56.25% + 46px);border-radius:8px;overflow:hidden}
+.tv .cab .vid iframe{position:absolute;inset:0;width:100%;height:100%;display:block;border:0;background:#0a0e16;transform:scale(1.09);transform-origin:50% 55%}
+.tv .ctrls{display:flex;align-items:center;justify-content:flex-end;gap:18px;margin-top:14px}
+.tv .knob{width:26px;height:26px;border-radius:50%;background:radial-gradient(circle at 34% 30%,#3a3324,#15110a);box-shadow:0 3px 6px rgba(0,0,0,.5),inset 0 -2px 4px rgba(0,0,0,.5)}
+.tv .grille{flex:1;max-width:200px;height:18px;border-radius:5px;background:repeating-linear-gradient(90deg,rgba(0,0,0,.32),rgba(0,0,0,.32) 4px,rgba(0,0,0,.1) 4px,rgba(0,0,0,.1) 8px)}
 
 /* the dresser unit: TV + Mac side by side on a mid-century credenza */
 .dunit{flex:none;width:640px;display:flex;flex-direction:column;align-items:stretch}
@@ -131,10 +129,10 @@
 .scene-cap{text-align:center;color:var(--muted);font-size:.78rem;margin-top:14px}
 .scene-cap b{color:var(--gold)}
 
-@media(max-width:1023px){
-  .vendo,.macslot{display:none}
-  .scene{min-height:0;padding:26px 16px 0;justify-content:center;gap:0}
-  .dunit{width:100%}.ontop{padding:0;gap:0}.tvset{width:100%}
+@media(max-width:760px){
+  .tv{padding:10px 12px 9px;border-radius:18px}
+  .tv .ctrls{gap:12px;margin-top:10px}
+  .tv .knob{width:20px;height:20px}.tv .grille{height:14px;max-width:140px}
 }
 
 /* ===== before / after ===== */
@@ -181,41 +179,14 @@
 </header>
 
 <section><div class="wrap">
-  <div class="scene-wrap">
-    <div class="scene">
-      <div class="floor"></div>
-      <!-- LEFT: the Vendo Coca-Cola machine, standing on its own -->
-      <div class="vendo">
-        <div class="head"><div class="drink">Drink</div><div class="cola">Coca-Cola</div><div class="tm">TRADE MARK REG.</div></div>
-        <div class="coinrow">
-          <div class="glass"><div class="row"><span class="cbot"></span><span class="cbot"></span><span class="cbot"></span><span class="cbot"></span><span class="cbot"></span></div></div>
-          <div class="price">10¢</div>
-        </div>
-        <div class="door">
-          <span class="handle"></span>
-          <span class="coinret"></span>
-          <span class="opener"></span>
-          <span class="disp"></span>
-          <span class="vbadge">Vendo</span>
-        </div>
-      </div>
-
-      <!-- RIGHT: the dresser — gold TV (on its legs) beside the Macintosh -->
-      <div class="dunit">
-        <div class="ontop">
-          <div class="tvset">
-            <div class="tv"><div class="cab"><div class="vid"><iframe src="process-embed.html" loading="lazy" title="How CritterLabs builds your HQ"></iframe></div></div><div class="ctrls"><span class="grille"></span><span class="knob"></span><span class="knob"></span></div></div>
-            <div class="tvlegs"><span></span><span></span></div>
-          </div>
-        </div>
-        <div class="dresser">
-          <div class="dtop"></div>
-          <div class="dcab" id="sneakerCases"></div>
-          <div class="dlegs"><span></span><span></span><span></span><span></span></div>
-        </div>
+  <!-- full-width gold TV mounted on the wall -->
+  <div class="walltv">
+    <div class="tvset">
+      <div class="tv">
+        <div class="cab"><div class="vid"><iframe src="process-embed.html" loading="lazy" title="How CritterLabs builds your HQ"></iframe></div></div>
+        <div class="ctrls"><span class="grille"></span><span class="knob"></span><span class="knob"></span></div>
       </div>
     </div>
-    <div class="scene-cap">The HQ build, on screen — set in a little CritterLabs lounge. <b>Hit play</b> in the TV to watch discovery → launch.</div>
   </div>
 </div></section>
 
@@ -298,37 +269,4 @@
 </div></footer>
 
 <script src="fw.js" defer></script>
-<script>
-/* sneaker cases — 9 drawn at random from the collection on each visit */
-(function () {
-  var S = [
-    { img: 'chicago',    n: 'AIR JORDAN 1',     s: 'Chicago Red Satin',  pair: true },
-    { img: 'fragment',   n: 'AIR JORDAN 1',     s: 'Fragment × Travis',  pair: true },
-    { img: 'concord',    n: 'AIR JORDAN 11',    s: 'Concord',            pair: true },
-    { img: 'mocha',      n: 'AIR JORDAN 1',     s: 'Travis Scott Mocha', pair: true },
-    { img: 'sbdunk',     n: 'NIKE SB DUNK',     s: 'Travis Scott',       pair: true },
-    { img: 'cactus',     n: 'AIR JORDAN 4',     s: 'Cactus Jack',        pair: true },
-    { img: 'low',        n: 'AIR JORDAN 1 LOW', s: 'Travis Scott',       pair: true },
-    { img: 'banned',     n: 'AIR JORDAN 1',     s: 'Banned',             pair: true },
-    { img: 'blackcat',   n: 'AIR JORDAN 3',     s: 'Black Cat',          pair: true },
-    { img: 'levis',      n: 'AIR JORDAN 4',     s: "Levi's",             pair: true },
-    { img: 'chunkydunk', n: 'NIKE SB DUNK',     s: 'Chunky Dunky',       pair: true },
-    { img: 'kaws-grey',  n: 'AIR JORDAN 4',     s: 'KAWS Grey',          pair: true },
-    { img: 'kaws-black', n: 'AIR JORDAN 4',     s: 'KAWS Black',         pair: true }
-  ];
-  var box = document.getElementById('sneakerCases');
-  if (!box) return;
-  for (var i = S.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var t = S[i]; S[i] = S[j]; S[j] = t; }
-  // 9 cases drawn at random from the 13-pair collection each visit
-  var pick = S.slice(0, 9);
-  box.innerHTML = pick.map(function (d) {
-    var src = 'images/shoes/' + d.img + '.png';
-    var back = d.pair ? '<img class="sh back" src="' + src + '" alt="" aria-hidden="true">' : '';
-    return '<div class="case"><div class="glint"></div><div class="floorline"></div><div class="shadow"></div>' +
-      '<div class="pwrap"><div class="pair">' + back +
-      '<img class="sh front" src="' + src + '" alt="' + d.n + ' ' + d.s + '"></div></div>' +
-      '<div class="plate"><b>' + d.n + '</b><i>' + d.s + '</i></div></div>';
-  }).join('');
-})();
-</script>
 </body></html>
