@@ -255,8 +255,8 @@ footer{padding:40px 0;border-top:1px solid var(--border)}
 
 /* screenshot gallery (carousel + lightbox) */
 .gallery .win .screen{position:relative;padding:8px}
-.gallery .gimg{display:none;width:100%;height:auto;border-radius:2px;cursor:zoom-in}
-.gallery .gimg.active{display:block}
+.gallery .win .screen .gimg{display:none;width:100%;height:auto;border-radius:2px;cursor:zoom-in}
+.gallery .win .screen .gimg.active{display:block}
 .gallery .gnav{position:absolute;top:50%;transform:translateY(-50%);width:38px;height:38px;border-radius:50%;border:1px solid var(--border-strong);background:rgba(8,12,20,.72);color:var(--gold);font-size:1.5rem;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(3px);transition:background .12s,transform .12s,color .12s;z-index:2}
 .gallery .gnav:hover{background:var(--blue-deep);color:#fff}
 .gallery .gprev{left:14px}.gallery .gnext{right:14px}
