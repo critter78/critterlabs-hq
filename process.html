@@ -40,14 +40,24 @@
 .ontop{display:flex;align-items:flex-end;justify-content:center;gap:10px;padding:0 6px}
 .macslot{width:166px;align-self:flex-end;display:flex;justify-content:center}
 .dresser{position:relative;margin-top:-2px}
-.dresser .dtop{height:16px;margin:0 -8px;border-radius:7px 7px 3px 3px;background:linear-gradient(180deg,#8a5c34,#5c3a20);border:1px solid #3a2413;box-shadow:0 4px 8px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.2)}
-.dresser .dbody{display:flex;gap:7px;padding:9px;background:linear-gradient(180deg,#6b4827,#46290f);border:1px solid #34200f;border-top:0;background-image:repeating-linear-gradient(90deg,rgba(0,0,0,.10) 0 1px,transparent 1px 7px)}
-.dresser .dcol{flex:1;display:flex;flex-direction:column;gap:7px}
-.dresser .drw{height:50px;border-radius:4px;display:flex;align-items:center;justify-content:center;gap:40px;background:linear-gradient(180deg,#7a542f,#5a3c22);box-shadow:inset 0 1px 0 rgba(255,255,255,.16),inset 0 0 0 1px rgba(0,0,0,.28),inset 0 -3px 6px rgba(0,0,0,.18)}
-.dresser .drw span{width:9px;height:9px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#f4d79a,#9c7322);box-shadow:0 1px 2px rgba(0,0,0,.55)}
-.dresser .dlegs{display:flex;justify-content:space-between;padding:0 28px}
-.dresser .dlegs span{width:17px;height:40px;background:linear-gradient(100deg,#5a3c20,#321f0d);clip-path:polygon(0 0,100% 0,70% 100%,30% 100%)}
-.dresser .dlegs span:first-child{transform:rotate(7deg)}.dresser .dlegs span:last-child{transform:rotate(-7deg)}
+.dresser .dtop{height:14px;margin:0 -7px;border-radius:6px 6px 2px 2px;background:linear-gradient(180deg,#6f4a28,#4a2f18);border:1px solid #2e1c0d;box-shadow:0 5px 10px rgba(0,0,0,.5),inset 0 1px 0 rgba(255,255,255,.22)}
+.dresser .dcab{position:relative;display:flex;gap:8px;padding:11px 12px;background:linear-gradient(180deg,#5a3d22,#3c2712);border:1px solid #2c1b0c;border-top:0;background-image:repeating-linear-gradient(90deg,rgba(0,0,0,.08) 0 1px,transparent 1px 9px)}
+.dresser .dcab::after{content:"";position:absolute;left:12px;right:12px;top:5px;height:1px;background:linear-gradient(90deg,transparent,rgba(214,172,92,.55),transparent)}
+.dresser .case{flex:1;position:relative;height:120px;border-radius:4px;overflow:hidden;background:linear-gradient(180deg,rgba(190,214,236,.13),rgba(150,176,205,.05));border:1px solid rgba(255,255,255,.15);box-shadow:inset 0 0 18px rgba(120,160,200,.12),inset 0 1px 0 rgba(255,255,255,.3)}
+.dresser .case::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;z-index:4;background:linear-gradient(90deg,rgba(140,210,255,.18),rgba(195,236,255,.85),rgba(140,210,255,.18))}
+.dresser .glint{position:absolute;top:-10%;left:-30%;width:55%;height:140%;z-index:3;background:linear-gradient(105deg,transparent,rgba(255,255,255,.1),transparent);transform:rotate(8deg);pointer-events:none}
+.dresser .floorline{position:absolute;left:8px;right:8px;bottom:23px;height:1px;background:rgba(255,255,255,.2);z-index:1}
+.dresser .pwrap{position:absolute;left:6px;right:6px;top:6px;bottom:24px;display:flex;align-items:flex-end;justify-content:center;z-index:2}
+.dresser .pair{position:relative;height:88px;display:flex;align-items:flex-end;justify-content:center}
+.dresser .sh{display:block;width:auto}
+.dresser .sh.front{position:relative;height:84px;z-index:2;filter:drop-shadow(0 6px 5px rgba(0,0,0,.4))}
+.dresser .sh.back{position:absolute;bottom:0;height:75px;transform:translateX(-24px);z-index:1;filter:brightness(.72) drop-shadow(0 5px 4px rgba(0,0,0,.45))}
+.dresser .plate{position:absolute;left:0;right:0;bottom:0;height:23px;z-index:5;background:linear-gradient(180deg,#15110b,#0a0805);border-top:1px solid rgba(214,172,92,.3);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px}
+.dresser .plate b{font-family:var(--mono);font-size:8px;letter-spacing:.12em;color:#f0d79a;line-height:1}
+.dresser .plate i{font-family:var(--mono);font-size:7px;letter-spacing:.03em;color:#9b968d;font-style:normal;line-height:1}
+.dresser .dlegs{display:flex;justify-content:space-between;padding:0 24px}
+.dresser .dlegs span{width:7px;height:42px;background:linear-gradient(100deg,#2a2a2d,#0d0d0f);border-radius:0 0 2px 2px}
+.dresser .dlegs span:first-child{transform:rotate(6deg)}.dresser .dlegs span:last-child{transform:rotate(-6deg)}
 
 /* ----- LEFT: the Vendo Coca-Cola machine, standing on its own ----- */
 /* the Vendo-style Coca-Cola bottle machine */
@@ -240,11 +250,7 @@
         </div>
         <div class="dresser">
           <div class="dtop"></div>
-          <div class="dbody">
-            <div class="dcol"><div class="drw"><span></span><span></span></div><div class="drw"><span></span><span></span></div></div>
-            <div class="dcol"><div class="drw"><span></span><span></span></div><div class="drw"><span></span><span></span></div></div>
-            <div class="dcol"><div class="drw"><span></span><span></span></div><div class="drw"><span></span><span></span></div></div>
-          </div>
+          <div class="dcab" id="sneakerCases"></div>
           <div class="dlegs"><span></span><span></span><span></span><span></span></div>
         </div>
       </div>
@@ -332,4 +338,30 @@
 </div></footer>
 
 <script src="fw.js" defer></script>
+<script>
+/* sneaker cases — pick 3 of the collection at random on each visit */
+(function () {
+  var S = [
+    { img: 'chicago',  n: 'AIR JORDAN 1',     s: 'Chicago Red Satin',       pair: true  },
+    { img: 'kaws',     n: 'AIR JORDAN 4',     s: 'KAWS · Grey',        pair: false },
+    { img: 'fragment', n: 'AIR JORDAN 1',     s: 'Fragment × Travis',  pair: true  },
+    { img: 'concord',  n: 'AIR JORDAN 11',    s: 'Concord',                 pair: true  },
+    { img: 'mocha',    n: 'AIR JORDAN 1',     s: 'Travis Scott Mocha',      pair: true  },
+    { img: 'sbdunk',   n: 'NIKE SB DUNK',     s: 'Travis Scott',            pair: true  },
+    { img: 'cactus',   n: 'AIR JORDAN 4',     s: 'Cactus Jack',             pair: true  },
+    { img: 'low',      n: 'AIR JORDAN 1 LOW', s: 'Travis Scott',            pair: true  }
+  ];
+  var box = document.getElementById('sneakerCases');
+  if (!box) return;
+  for (var i = S.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var t = S[i]; S[i] = S[j]; S[j] = t; }
+  box.innerHTML = S.slice(0, 3).map(function (d) {
+    var src = 'images/shoes/' + d.img + '.png';
+    var back = d.pair ? '<img class="sh back" src="' + src + '" alt="" aria-hidden="true">' : '';
+    return '<div class="case"><div class="glint"></div><div class="floorline"></div>' +
+      '<div class="pwrap"><div class="pair">' + back +
+      '<img class="sh front" src="' + src + '" alt="' + d.n + ' ' + d.s + '"></div></div>' +
+      '<div class="plate"><b>' + d.n + '</b><i>' + d.s + '</i></div></div>';
+  }).join('');
+})();
+</script>
 </body></html>
