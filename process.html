@@ -11,7 +11,7 @@
 <style>
 /* ===== retro scene ===== */
 .scene-wrap{margin:34px 0 10px}
-.scene{position:relative;min-height:520px;display:flex;align-items:flex-end;justify-content:center;
+.scene{position:relative;min-height:600px;display:flex;align-items:flex-end;justify-content:center;gap:22px;
   border:1px solid var(--border);border-radius:14px;padding:36px 24px 0;overflow:hidden;
   background:
     radial-gradient(120% 80% at 50% 8%,rgba(245,200,66,.06),transparent 55%),
@@ -22,12 +22,12 @@
   border-top:1px solid rgba(245,200,66,.12)}
 
 /* ----- the gold TV (swap .gold for .steel to compare) ----- */
-.tvset{--c1:#f3d271;--c2:#b07e22;--bd:#d8b049;position:relative;z-index:3;width:min(660px,100%)}
+.tvset{--c1:#f3d271;--c2:#b07e22;--bd:#d8b049;position:relative;z-index:3;width:min(600px,100%)}
 .tvset.steel{--c1:#4a5058;--c2:#2c3138;--bd:#5b626a}
 .tv{background:linear-gradient(160deg,var(--c1),var(--c2));border:1px solid var(--bd);border-radius:24px;
   padding:20px 22px 16px;box-shadow:0 30px 60px rgba(0,0,0,.55),inset 0 1px 0 rgba(255,255,255,.35)}
 .tv .cab{background:#0a0e16;border-radius:12px;padding:9px;box-shadow:inset 0 0 0 1px rgba(0,0,0,.6)}
-.tv .cab iframe{display:block;width:100%;height:430px;border:0;border-radius:6px;background:#0a0e16}
+.tv .cab iframe{display:block;width:100%;height:540px;border:0;border-radius:6px;background:#0a0e16}
 .tv .ctrls{display:flex;align-items:center;justify-content:flex-end;gap:12px;margin-top:12px}
 .tv .knob{width:22px;height:22px;border-radius:50%;background:radial-gradient(circle at 34% 30%,#3a3324,#15110a);box-shadow:0 2px 4px rgba(0,0,0,.5),inset 0 -2px 3px rgba(0,0,0,.5)}
 .tv .grille{flex:1;max-width:110px;height:14px;border-radius:4px;background:repeating-linear-gradient(90deg,rgba(0,0,0,.32),rgba(0,0,0,.32) 3px,rgba(0,0,0,.1) 3px,rgba(0,0,0,.1) 6px)}
@@ -36,20 +36,33 @@
 .tv-legs span:first-child{transform:rotate(9deg)}.tv-legs span:last-child{transform:rotate(-9deg)}
 
 /* ----- Coke machine (left) ----- */
-.coke{position:absolute;left:18px;bottom:18px;z-index:2;width:118px;height:240px;border-radius:14px 14px 7px 7px;
-  background:linear-gradient(180deg,#e22a23,#a4150f);border:2px solid #7d0f0c;
-  box-shadow:0 22px 34px rgba(0,0,0,.5),inset 0 2px 0 rgba(255,255,255,.18)}
-.coke::before{content:"";position:absolute;top:30px;left:0;right:0;height:22px;background:#fff;transform:skewY(-7deg);opacity:.92;box-shadow:0 -4px 0 #fff}
-.coke .win{position:absolute;top:74px;left:12px;right:12px;height:96px;border-radius:6px;background:linear-gradient(160deg,#0c1320,#060a12);border:2px solid #6f0c09;box-shadow:inset 0 0 16px rgba(0,0,0,.7)}
-.coke .win i{position:absolute;bottom:8px;left:8px;width:13px;height:30px;border-radius:2px;background:linear-gradient(#e8413a,#7d0f0c);box-shadow:0 0 0 1px rgba(0,0,0,.4)}
-.coke .win i:nth-child(2){left:26px}.coke .win i:nth-child(3){left:44px;background:linear-gradient(#f5b53f,#a6760f)}.coke .win i:nth-child(4){left:62px}.coke .win i:nth-child(5){left:80px}
-.coke .pad{position:absolute;top:78px;right:-2px;width:0}
-.coke .slot{position:absolute;bottom:14px;left:18px;right:18px;height:16px;border-radius:3px;background:#1a0605;box-shadow:inset 0 2px 5px rgba(0,0,0,.8)}
-.coke .cap{position:absolute;top:8px;left:0;right:0;text-align:center;font-family:var(--display);color:#fff;font-size:1.1rem;letter-spacing:.5px;text-shadow:0 1px 2px rgba(0,0,0,.4)}
+/* left stack: retro computer sits ON TOP of a big 1960s soda machine */
+.leftstack{flex:none;width:214px;align-self:flex-end;z-index:2}
+.leftstack .retro{width:188px;margin:0 auto 4px}
 
-/* ----- retro computer + Track & Field (right) ----- */
-.retro{position:absolute;right:16px;bottom:18px;z-index:2;width:166px}
-.retro .mon{background:linear-gradient(#e9e2cf,#cdc4a9);border-radius:10px 10px 4px 4px;padding:12px 12px 16px;border:1px solid #b3a988;box-shadow:0 22px 34px rgba(0,0,0,.5),inset 0 1px 0 rgba(255,255,255,.6)}
+.coke{position:relative;width:214px;height:340px;border-radius:16px 16px 9px 9px;
+  background:linear-gradient(100deg,#c9201a,#e23029 18%,#aa1810 54%,#860f0a);
+  border:1px solid #6d0e0a;box-shadow:0 28px 42px rgba(0,0,0,.55),inset 0 2px 0 rgba(255,255,255,.22),inset -12px 0 26px rgba(0,0,0,.3)}
+.coke .top{position:absolute;top:0;left:0;right:0;height:30px;border-radius:15px 15px 0 0;background:linear-gradient(#f5f7f9,#bfc5cc);box-shadow:inset 0 -2px 4px rgba(0,0,0,.25)}
+.coke .top b{display:block;text-align:center;line-height:30px;font-family:var(--display);font-size:1.25rem;color:#c9201a}
+.coke .stripe{position:absolute;top:34px;left:0;right:0;height:17px;background:#fff;transform:skewY(-5deg);opacity:.96;box-shadow:0 6px 10px rgba(0,0,0,.2)}
+.coke .stripe::after{content:"ICE COLD";position:absolute;inset:0;transform:skewY(5deg);text-align:center;line-height:17px;font-family:var(--mono);font-weight:700;font-size:.5rem;letter-spacing:.22em;color:#c9201a}
+.coke .win{position:absolute;top:66px;left:16px;width:120px;bottom:66px;border-radius:7px;background:linear-gradient(160deg,#0d1422,#05080f);border:2px solid #5e0b08;box-shadow:inset 0 0 18px rgba(0,0,0,.85)}
+.coke .shelf{position:absolute;left:9px;right:9px;display:flex;justify-content:space-between}
+.coke .shelf.a{bottom:78px}.coke .shelf.b{bottom:42px}.coke .shelf.c{bottom:7px}
+.coke .bot{position:relative;width:13px;height:30px;border-radius:3px 3px 4px 4px;background:linear-gradient(#1f7a3a,#0c4a22);box-shadow:inset 1px 0 0 rgba(255,255,255,.25)}
+.coke .bot::before{content:"";position:absolute;top:-6px;left:50%;transform:translateX(-50%);width:5px;height:7px;background:inherit;border-radius:2px 2px 0 0}
+.coke .bot::after{content:"";position:absolute;top:-9px;left:50%;transform:translateX(-50%);width:7px;height:3px;background:#c9201a;border-radius:2px}
+.coke .bot.r{background:linear-gradient(#d8413a,#8c120d)}
+.coke .panel{position:absolute;top:66px;right:14px;width:58px;bottom:66px;border-radius:7px;background:linear-gradient(160deg,#eaeef2,#aab2bb);box-shadow:inset 0 1px 0 #fff,0 2px 5px rgba(0,0,0,.3)}
+.coke .panel .pb{position:absolute;left:12px;width:34px;height:13px;border-radius:3px;background:linear-gradient(#c9201a,#8c120d);box-shadow:0 1px 2px rgba(0,0,0,.4)}
+.coke .panel .pb:nth-child(1){top:12px}.coke .panel .pb:nth-child(2){top:32px}.coke .panel .pb:nth-child(3){top:52px}
+.coke .panel .coin{position:absolute;bottom:11px;left:50%;transform:translateX(-50%);width:4px;height:22px;border-radius:3px;background:#2a2f35;box-shadow:0 0 0 2px #8a9097}
+.coke .tray{position:absolute;bottom:16px;left:18px;right:18px;height:28px;border-radius:5px;background:linear-gradient(#1a0605,#0c0302);box-shadow:inset 0 3px 7px rgba(0,0,0,.85)}
+.coke .legs{position:absolute;bottom:-12px;left:20px;right:20px;display:flex;justify-content:space-between}
+.coke .legs span{width:12px;height:12px;background:linear-gradient(#cfd4da,#7d848c);border-radius:0 0 4px 4px}
+
+.retro .mon{background:linear-gradient(#e9e2cf,#cdc4a9);border-radius:10px 10px 4px 4px;padding:11px 11px 14px;border:1px solid #b3a988;box-shadow:0 14px 22px rgba(0,0,0,.4),inset 0 1px 0 rgba(255,255,255,.6)}
 .retro .scr{position:relative;height:104px;border-radius:4px;overflow:hidden;background:#04140a;border:2px solid #2a2415;box-shadow:inset 0 0 14px rgba(0,0,0,.8)}
 .retro .scr .sky{position:absolute;inset:0;background:linear-gradient(#071f12,#020a06)}
 .retro .scr .track{position:absolute;left:0;right:0;bottom:14px;height:18px;background:repeating-linear-gradient(90deg,#0f5a2e 0 10px,#0c4a26 10px 20px)}
@@ -59,14 +72,13 @@
 .retro .scr .hi{position:absolute;top:6px;left:7px;font-family:var(--mono);font-size:7px;letter-spacing:1px;color:#3ddc84}
 .retro .scr .ti{position:absolute;top:6px;right:7px;font-family:var(--mono);font-size:7px;letter-spacing:1px;color:#f5b53f}
 .retro .scr .crt{position:absolute;inset:0;background:repeating-linear-gradient(0deg,rgba(0,0,0,.18) 0 1px,transparent 1px 3px);pointer-events:none}
-.retro .vent{margin-top:8px;height:5px;border-radius:3px;background:repeating-linear-gradient(90deg,#b3a988 0 2px,#d7cdb1 2px 6px)}
-.retro .base{height:12px;margin:6px 10px 0;border-radius:0 0 6px 6px;background:linear-gradient(#d7cdb1,#b0a583);border:1px solid #b3a988;border-top:0}
-.retro .cap{text-align:center;font-family:var(--mono);font-size:.5rem;letter-spacing:.12em;color:var(--muted);margin-top:7px}
+.retro .vent{margin-top:7px;height:5px;border-radius:3px;background:repeating-linear-gradient(90deg,#b3a988 0 2px,#d7cdb1 2px 6px)}
+.retro .base{height:11px;margin:5px 14px 0;border-radius:0 0 6px 6px;background:linear-gradient(#d7cdb1,#b0a583);border:1px solid #b3a988;border-top:0}
 
 .scene-cap{text-align:center;color:var(--muted);font-size:.78rem;margin-top:14px}
 .scene-cap b{color:var(--gold)}
 
-@media(max-width:880px){.coke,.retro{display:none}.scene{min-height:0;padding:26px 16px 0}.tv .cab iframe{height:300px}}
+@media(max-width:880px){.leftstack{display:none}.scene{min-height:0;padding:26px 16px 0}.tv .cab iframe{height:300px}}
 
 /* ===== before / after ===== */
 .ba{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:28px}
@@ -93,9 +105,9 @@
 <body>
 
 <nav><div class="wrap navin">
-  <a class="logo" href="index.html"><span class="lmark-wrap"><svg class="lmark" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs><filter id="hqg" x="-80%" y="-80%" width="260%" height="260%"><feGaussianBlur stdDeviation="1.7"/></filter></defs><rect x="2" y="2" width="28" height="28" rx="7" fill="#0E1320" stroke="#F5C842" stroke-width="1.6"/><circle cx="16" cy="16" r="7" stroke="#3B8BFF" stroke-width="1.6"/><line x1="16" y1="5.5" x2="16" y2="9" stroke="#F5C842" stroke-width="1.6" stroke-linecap="round"/><line x1="16" y1="23" x2="16" y2="26.5" stroke="#F5C842" stroke-width="1.6" stroke-linecap="round"/><line x1="5.5" y1="16" x2="9" y2="16" stroke="#F5C842" stroke-width="1.6" stroke-linecap="round"/><line x1="23" y1="16" x2="26.5" y2="16" stroke="#F5C842" stroke-width="1.6" stroke-linecap="round"/><circle class="glow" cx="16" cy="16" r="4.2" fill="#3B8BFF" filter="url(#hqg)"/><circle cx="16" cy="16" r="2.4" fill="#3B8BFF"/></svg><span class="fw"><i style="--tx:16px;--ty:0px;color:#F5C842;animation-delay:0s"></i><i style="--tx:13px;--ty:-9px;color:#3B8BFF;animation-delay:.03s"></i><i style="--tx:5px;--ty:-15px;color:#4ADE80;animation-delay:.06s"></i><i style="--tx:-5px;--ty:-15px;color:#ffffff;animation-delay:.02s"></i><i style="--tx:-13px;--ty:-9px;color:#F5C842;animation-delay:.05s"></i><i style="--tx:-16px;--ty:0px;color:#3B8BFF;animation-delay:.08s"></i><i style="--tx:-13px;--ty:9px;color:#4ADE80;animation-delay:.04s"></i><i style="--tx:-5px;--ty:15px;color:#ffffff;animation-delay:.07s"></i><i style="--tx:5px;--ty:15px;color:#F5C842;animation-delay:.01s"></i><i style="--tx:13px;--ty:9px;color:#3B8BFF;animation-delay:.05s"></i></span></span><span class="lw">CritterLabs <b>HQ</b></span></a>
+  <a class="logo" href="/"><span class="lmark-wrap"><svg class="lmark" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs><filter id="hqg" x="-80%" y="-80%" width="260%" height="260%"><feGaussianBlur stdDeviation="1.7"/></filter></defs><rect x="2" y="2" width="28" height="28" rx="7" fill="#0E1320" stroke="#F5C842" stroke-width="1.6"/><circle cx="16" cy="16" r="7" stroke="#3B8BFF" stroke-width="1.6"/><line x1="16" y1="5.5" x2="16" y2="9" stroke="#F5C842" stroke-width="1.6" stroke-linecap="round"/><line x1="16" y1="23" x2="16" y2="26.5" stroke="#F5C842" stroke-width="1.6" stroke-linecap="round"/><line x1="5.5" y1="16" x2="9" y2="16" stroke="#F5C842" stroke-width="1.6" stroke-linecap="round"/><line x1="23" y1="16" x2="26.5" y2="16" stroke="#F5C842" stroke-width="1.6" stroke-linecap="round"/><circle class="glow" cx="16" cy="16" r="4.2" fill="#3B8BFF" filter="url(#hqg)"/><circle cx="16" cy="16" r="2.4" fill="#3B8BFF"/></svg><span class="fw"><i style="--tx:16px;--ty:0px;color:#F5C842;animation-delay:0s"></i><i style="--tx:13px;--ty:-9px;color:#3B8BFF;animation-delay:.03s"></i><i style="--tx:5px;--ty:-15px;color:#4ADE80;animation-delay:.06s"></i><i style="--tx:-5px;--ty:-15px;color:#ffffff;animation-delay:.02s"></i><i style="--tx:-13px;--ty:-9px;color:#F5C842;animation-delay:.05s"></i><i style="--tx:-16px;--ty:0px;color:#3B8BFF;animation-delay:.08s"></i><i style="--tx:-13px;--ty:9px;color:#4ADE80;animation-delay:.04s"></i><i style="--tx:-5px;--ty:15px;color:#ffffff;animation-delay:.07s"></i><i style="--tx:5px;--ty:15px;color:#F5C842;animation-delay:.01s"></i><i style="--tx:13px;--ty:9px;color:#3B8BFF;animation-delay:.05s"></i></span></span><span class="lw">CritterLabs <b>HQ</b></span></a>
   <div class="navlinks">
-    <a href="index.html">Home</a>
+    <a href="/">Home</a>
     <a href="about.html">About</a>
     <a href="offer.html">Services</a>
     <a href="process.html" class="active">Process</a>
@@ -115,18 +127,29 @@
   <div class="scene-wrap">
     <div class="scene">
       <div class="floor"></div>
-      <!-- Coke machine -->
-      <div class="coke"><div class="cap">COLD</div><div class="win"><i></i><i></i><i></i><i></i><i></i></div><div class="slot"></div></div>
-      <!-- the gold TV with the live animation -->
+      <!-- LEFT: retro computer on top of a big 1960s soda machine -->
+      <div class="leftstack">
+        <div class="retro">
+          <div class="mon"><div class="scr"><div class="sky"></div><div class="lane"></div><div class="track"></div><div class="run"></div><div class="hurdle"></div><div class="hi">HI 9999</div><div class="ti">TRACK</div><div class="crt"></div></div><div class="vent"></div></div>
+          <div class="base"></div>
+        </div>
+        <div class="coke">
+          <div class="top"><b>SODA</b></div>
+          <div class="stripe"></div>
+          <div class="win">
+            <div class="shelf a"><span class="bot"></span><span class="bot r"></span><span class="bot"></span><span class="bot r"></span></div>
+            <div class="shelf b"><span class="bot r"></span><span class="bot"></span><span class="bot r"></span><span class="bot"></span></div>
+            <div class="shelf c"><span class="bot"></span><span class="bot r"></span><span class="bot"></span><span class="bot r"></span></div>
+          </div>
+          <div class="panel"><span class="pb"></span><span class="pb"></span><span class="pb"></span><span class="coin"></span></div>
+          <div class="tray"></div>
+          <div class="legs"><span></span><span></span></div>
+        </div>
+      </div>
+      <!-- CENTER: the gold TV with the live animation -->
       <div class="tvset">
         <div class="tv"><div class="cab"><iframe src="process-embed.html" loading="lazy" title="How CritterLabs builds your HQ"></iframe></div><div class="ctrls"><span class="grille"></span><span class="knob"></span><span class="knob"></span></div></div>
         <div class="tv-legs"><span></span><span></span></div>
-      </div>
-      <!-- retro computer + Track & Field -->
-      <div class="retro">
-        <div class="mon"><div class="scr"><div class="sky"></div><div class="lane"></div><div class="track"></div><div class="run"></div><div class="hurdle"></div><div class="hi">HI 9999</div><div class="ti">TRACK</div><div class="crt"></div></div><div class="vent"></div></div>
-        <div class="base"></div>
-        <div class="cap">RUN &amp; SHIP</div>
       </div>
     </div>
     <div class="scene-cap">The HQ build, on screen — set in a little CritterLabs lounge. <b>Hit play</b> in the TV to watch discovery → launch.</div>
@@ -208,7 +231,7 @@
 
 <footer><div class="wrap foot">
   <div>© 2026 CritterLabs — AI &amp; Algorithmic Engineering Studio</div>
-  <div class="links"><a href="index.html">Home</a><a href="about.html">About</a><a href="offer.html">Services</a><a href="work.html">Work</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a></div>
+  <div class="links"><a href="/">Home</a><a href="about.html">About</a><a href="offer.html">Services</a><a href="work.html">Work</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a></div>
 </div></footer>
 
 <script src="fw.js" defer></script>
